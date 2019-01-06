@@ -18,13 +18,16 @@ A tutorial for manim, a mathematical animation engine made by 3b1b
 * [Acknowledgements](#Acknowledgements)
 ## Installations
 This installation and guide is meant for linux users. I am running Ubuntu 18.04, but any other linux version should work. We will start by installing prerequisites. \
+
 We will start with installing some system requirements: 
 * Cairo 
 * Latex 
 * ffmpeg
 * Sox
 Install by running the following commands. 
-  sudo apt install SystemReq
+
+    sudo apt install SystemReq
+
 ### Common-Problems
 
 ## Running-Manim-Projects
