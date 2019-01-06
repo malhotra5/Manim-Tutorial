@@ -87,6 +87,7 @@ from big_ol_pile_of_manim_imports import *
 
 class Shapes(Scene):
     def construct(self):
+        ######Code######
         #Making shapes
         circle = Circle()
         square = Square()
@@ -101,7 +102,7 @@ class Shapes(Scene):
 
 We will break this into parts: 
 * Import: The import in this code is the import we will use in all manim projects. It has almost all the imports we will ever require
-* Class: For running animations, you have to make a class. 
+* Class: For running animations, you have to make a class that has a base class from manim. 
   * Method: The construct method is special to manim. Manim calls on construct for creating animations. Therefore, every class that runs manim has to have this method. 
 * Code: You don't have to fully understand how the code works yet. But you can see that you first define your animations, and then you display it. You can experiment with the order in which you define and display.
 
