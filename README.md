@@ -82,7 +82,34 @@ I recommend to look at it later, and start with the tutorial.
 ## Tutorial!
 Finally we can start. In this tutorial, we will learn by doing. 
 ### Basics
+``` 
+from big_ol_pile_of_manim_imports import *
 
+class Shapes(Scene):
+    def construct(self):
+        #Making shapes
+        circle = Circle()
+        square = Square()
+        triangle=Polygon(np.array([0,0,0]),np.array([1,1,0]),np.array([1,-1,0]))
+
+        #Showing shapes
+        self.play(ShowCreation(circle))
+        self.play(FadeOut(circle))
+        self.play(GrowFromCenter(square))
+        self.play(Transform(square,triangle))
+```
+
+We will break this into parts: 
+* Import: The import in this code is the import we will use in all manim projects. It has almost all the imports we will ever require
+* Class: For running animations, you have to make a class. 
+  * Method: The construct method is special to manim. Manim calls on construct for creating animations. Therefore, every class that runs manim has to have this method. 
+* Code: You don't have to fully understand how the code works yet. But you can see that you first define your animations, and then you display it. You can experiment with the order in which you define and display.
+
+**NOTE**: To run this animation, you would run the following in the terminal - 
+
+    python3 -m manim fileName.py Shapes -pl
+    
+ 
 ### Shapes
 ### Text
 ### Math-Equations
