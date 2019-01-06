@@ -15,6 +15,7 @@ A tutorial for manim, a mathematical animation engine made by 3b1b
   * [Old_Projects](#Old_Projects)
 * [Putting it together](#Putting-it-together)
 * [YOUR GO TO GUIDE FOR EVERYDAY USE!!](#GO-TO-GUIDE)
+* [Acknowledgements](#Acknowledgements)
 ## Installations
 
 ### Common-Problems
