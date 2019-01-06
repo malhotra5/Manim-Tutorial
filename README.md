@@ -7,6 +7,8 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
 * [Installations](#Installations)
   * [Common Problems](#Common-Problems)
 * [Running Manim Projects](#Running-Manim-Projects)
+  * [What ClassName means](#classNames)
+  * [What are the possible args](#Args)
 * [Exploring the repo](#Exploring-the-Repo)
   * [ManimLib](#ManimLib)
     * [Animation](#Animations)
@@ -44,7 +46,18 @@ People are sometimes unable to install cairo through the terminal. But, it is po
 * Problem #2: **Exception: Latex error converting to dvi. See log output above or the log file**
 This error can be frustrating. Especially when you don't know what to isntall. But if you followed my installation guide, this error is not due to missing a system requirement. Rather, there is a problem with the code. 
 ## Running-Manim-Projects
+Easy way to test whether all your installations are working is by running the command below
+    
+    python3 -m manim example_scenes.py SquareToCircle -pl
+    
+If it worked, then congratulations! Now you can run manim programs and get started with making animations. 
+Now, this will be the general command to run all manim projects
 
+    python3 -m manim pythonFile.py className -args
+ 
+### classNames
+
+### Args
 ## Exploring-the-Repo
 
 ### ManimLib
