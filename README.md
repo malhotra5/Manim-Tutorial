@@ -15,7 +15,8 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
   * [Shapes](#Shapes)
   * [Text](#Text)
   * [Math Equations](#Math-Equations)
-
+  * [Graphing](#Graphing)
+  
 * [Exploring the repo](#Exploring-the-Repo)
   * [ManimLib](#ManimLib)
     * [Animation](#Animations)
@@ -27,6 +28,7 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
   * [Old_Projects](#Old_Projects)
 * [Putting it together](#Putting-it-together)
 * [YOUR GO TO GUIDE FOR EVERYDAY USE!!](#GO-TO-GUIDE)
+* [Further Work](#Further-Work)
 * [Acknowledgements](#Acknowledgements)
 ## Installations
 This installation and guide is meant for linux users. We will start by installing prerequisites. 
@@ -78,7 +80,12 @@ Manim programs have a certain structure. The Python program file requires you to
 Args are a list of arguements that can be stated when running the program. The most important agruements and it's explanations are provided in the [GO TO GUIDE.](#GO-TO-GUIDE)
 I recommend to look at it later, and start with the tutorial.
 ## Tutorial!
+Finally we can start. In this tutorial, we will learn by doing. 
 ### Basics
+### Shapes
+### Text
+### Math-Equations
+### Graphing
 
 ## Exploring-the-Repo
 
@@ -93,6 +100,7 @@ I recommend to look at it later, and start with the tutorial.
 ### Old_Projects
 ## Putting-it-together
 ## GO-TO-GUIDE!
+## Further-Work
 ## Acknowledgements
 * 3 Blue 1 Brown: The creator of this engine who uses it for creating cool math videos. Visit his YouTube channel and manin repo at 
   * https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw
