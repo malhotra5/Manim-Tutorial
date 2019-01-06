@@ -69,7 +69,7 @@ Now, this will be the general command to run all manim projects
 
     python3 -m manim pythonFile.py className -args
 
-**NOTE 1**: Your videos that you make are saved in the folder called *media*. 
+**NOTE 1**: Your videos that you make are saved in the folder called *media*. \
 **NOTE 2**: The command for running the manim programs should only be run in the parent directory. 
  
 ### classNames
