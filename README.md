@@ -111,7 +111,7 @@ We will break this into parts:
     python3 -m manim fileName.py Shapes -pl
     
 **Results**
-<video src="results/Shapes.mp4" width="320" height="200" controls preload></video>
+<video src="results/Shapes.mp4" controls preload></video>
 
 ### Shapes
 
