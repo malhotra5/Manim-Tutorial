@@ -15,4 +15,4 @@ A tutorial for manim, a mathematical animation engine made by 3b1b
   * https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw
   * https://github.com/3b1b/manim
 * Todd Zimmerman: Made a documentation for manim that is outdated and works on Python 2.7. Visit it at
- * https://talkingphysics.wordpress.com/2018/06/11/learning-how-to-animate-videos-using-manim-series-a-journey/
+  * https://talkingphysics.wordpress.com/2018/06/11/learning-how-to-animate-videos-using-manim-series-a-journey/
