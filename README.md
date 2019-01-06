@@ -42,7 +42,7 @@ People are sometimes unable to install cairo through the terminal. But, it is po
 
         pip3 install pycairo
 * Problem #2: **Exception: Latex error converting to dvi. See log output above or the log file**
-This error can be frustrating. Especially when you don't know what to isntall. But if you followed my installation guide, this error is not due to mussing a system requirement. Rather, there is a problem with the code. 
+This error can be frustrating. Especially when you don't know what to isntall. But if you followed my installation guide, this error is not due to missing a system requirement. Rather, there is a problem with the code. 
 ## Running-Manim-Projects
 
 ## Exploring-the-Repo
