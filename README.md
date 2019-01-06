@@ -27,7 +27,15 @@ We will start with installing some system requirements: Cairo, Latex, ffmpeg and
 Install by running the following commands on the terminal: 
 
     sudo apt install SystemReq
+    
+Some additional installations are mentioned below
 
+    sudo apt-get install libcairo2-dev libjpeg-dev libgif-dev 
+    sudo apt install texlive-latex-base texlive-full texlive-fonts-extra
+Phew! This will be the last isntallation for additional python modules. Run this in the terminal 
+  
+    python3 -m pip install -r requirements.txt
+    
 ### Common-Problems
 * Problem #1: Cairo System requirement 
 People are sometimes unable to install cairo through the terminal. But, it is possible to install it using the Python.
