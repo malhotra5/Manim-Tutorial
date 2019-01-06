@@ -1,7 +1,7 @@
 # Manim-Tutorial
 A tutorial for manim, a mathematical animation engine made by 3b1b for Python. 
 ## Requirements
-* Python 3.7 (I managed to run it on version 3.6.5, so I'm guessing 3.6 and above works)
+* Python 3.7 (I managed to run it on version 3.6.7, so I'm guessing 3.6 and above works)
 * Linux 
 ## Table of Contents
 * [Installations](#Installations)
@@ -110,7 +110,9 @@ We will break this into parts:
 
     python3 -m manim fileName.py Shapes -pl
     
- 
+**Results**
+<video src="results/Shapes.mp4" width="320" height="200" controls preload></video>
+
 ### Shapes
 
 ### Text
