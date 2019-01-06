@@ -63,9 +63,9 @@ Now, this will be the general command to run all manim projects
     python3 -m manim pythonFile.py className -args
  
 ### classNames
-
+Manim programs have a certain structure. 
 ### Args
-
+Args are a list of arguements that can be stated when running the program. The most important agruements and it's explanations are provided in the [GO TO GUIDE.](#GO-TO-GUIDE)
 ## Tutorial!
 ### Basics
 
