@@ -2,10 +2,17 @@
 A tutorial for manim, a mathematical animation engine made by 3b1b
 ## Table of Contents
 * Installation
+* Running manim programs
 * Exploring the repo
+ * ManimLib
+  * Animations
+  * Mobeject
+   * Types
+ * Scene
+ * Shapes
+ * Utils
 * Scenes (different types and how to use them)
-* Shapes
-* 
+ 
 * IMPORTANT METHODS!!!!
 ##
 
