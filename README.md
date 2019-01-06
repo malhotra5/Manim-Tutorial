@@ -101,6 +101,7 @@ Finally we can start. In this tutorial, we will learn by doing.
 ## Putting-it-together
 ## GO-TO-GUIDE!
 ## Further-Work
+I am missing a lot of aspects behind this powerful library after reverse engineering manim. There are things such as 3D scenes that still need to be documented. But hopefully this guide will cater to your basic needs. 
 ## Acknowledgements
 * 3 Blue 1 Brown: The creator of this engine who uses it for creating cool math videos. Visit his YouTube channel and manin repo at 
   * https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw
