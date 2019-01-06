@@ -9,6 +9,13 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
 * [Running Manim Projects](#Running-Manim-Projects)
   * [What ClassName means](#classNames)
   * [What are the possible args](#Args)
+
+* [Tutorial!](#Tutorial)
+  * [Basics, Getting Started](#Basics)
+  * [Shapes](#Shapes)
+  * [Text](#Text)
+  * [Math Equations](#Math-Equations)
+
 * [Exploring the repo](#Exploring-the-Repo)
   * [ManimLib](#ManimLib)
     * [Animation](#Animations)
@@ -58,6 +65,10 @@ Now, this will be the general command to run all manim projects
 ### classNames
 
 ### Args
+
+## Tutorial!
+### Basics
+
 ## Exploring-the-Repo
 
 ### ManimLib
