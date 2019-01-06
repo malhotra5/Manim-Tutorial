@@ -73,7 +73,7 @@ Now, this will be the general command to run all manim projects
 **NOTE 2**: The command for running the manim programs should only be run in the parent directory. 
  
 ### classNames
-Manim programs have a certain structure. The Python program file requires you to make classes for all your series of animations. You can 
+Manim programs have a certain structure. The Python program file requires you to make classes for all your series of animations. If you make more than a few classes, you have to run commands for every class you make. Seperate videos are made for every class.  
 ### Args
 Args are a list of arguements that can be stated when running the program. The most important agruements and it's explanations are provided in the [GO TO GUIDE.](#GO-TO-GUIDE)
 I recommend to look at it later, and start with the tutorial.
