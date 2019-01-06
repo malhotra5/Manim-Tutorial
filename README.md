@@ -6,14 +6,13 @@ A tutorial for manim, a mathematical animation engine made by 3b1b
 * [Exploring the repo](#Exploring-the-Repo)
   * ManimLib
     * Animations
-    * Mobeject
+    * Mobjects
       * Types
     * Scene
     * Utils
   * Media
   * Old_Projects
-* Scenes (different types and how to use them)
- 
+* Putting it together
 * IMPORTANT METHODS!!!!
 ## Installations
 
@@ -21,7 +20,17 @@ A tutorial for manim, a mathematical animation engine made by 3b1b
 
 ## Exploring-the-Repo
 
+### ManimLib
+#### Animations
+#### Mobjects
+##### Types
+#### Scenes
+#### Utils
 
+### Media
+### Old_Projects
+## Putting-it-together
+# Important-Methods!
 ## Acknowledgements
 * 3 Blue 1 Brown: The creator of this engine who uses it for creating cool math videos. Visit his YouTube channel and manin repo at 
   * https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw
