@@ -1,5 +1,8 @@
 # Manim-Tutorial
-A tutorial for manim, a mathematical animation engine made by 3b1b
+A tutorial for manim, a mathematical animation engine made by 3b1b for Python. 
+## Requirements
+* Python 3.7 (I managed to run it on version 3.6.5, so I'm guessing 3.6 and above works)
+* Linux 
 ## Table of Contents
 * [Installations](#Installations)
   * [Common Problems](#Common-Problems)
@@ -17,7 +20,7 @@ A tutorial for manim, a mathematical animation engine made by 3b1b
 * [YOUR GO TO GUIDE FOR EVERYDAY USE!!](#GO-TO-GUIDE)
 * [Acknowledgements](#Acknowledgements)
 ## Installations
-This installation and guide is meant for linux users. I am running Ubuntu 18.04, but any other linux version should work. We will start by installing prerequisites. \
+This installation and guide is meant for linux users. We will start by installing prerequisites. 
 
 We will start with installing some system requirements: Cairo, Latex, ffmpeg and sox. 
 
@@ -25,8 +28,11 @@ Install by running the following commands on the terminal:
 
     sudo apt install SystemReq
 
-
 ### Common-Problems
+* Problem #1: Cairo System requirement 
+People are sometimes unable to install cairo through the terminal. But, it is possible to install it using the Python. 
+    
+     pip3 install pycairo
 
 ## Running-Manim-Projects
 
