@@ -10,6 +10,8 @@ A tutorial for manim, a mathematical animation engine made by 3b1b
       * Types
     * Scene
     * Utils
+  * Media
+  * Old_Projects
 * Scenes (different types and how to use them)
  
 * IMPORTANT METHODS!!!!
