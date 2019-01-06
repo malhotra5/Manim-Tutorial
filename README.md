@@ -3,7 +3,7 @@ A tutorial for manim, a mathematical animation engine made by 3b1b
 ## Table of Contents
 * [Installations](#Installations)
   * [Common Problems](#Common-Problems)
-* [Running Manim Projects](#Running-Manim-Projects)
+* [Running Manim Projects](#Running)
 * [Exploring the repo](#Exploring-the-Repo)
   * [ManimLib](#ManimLib)
     * [Animation](#Animations)
@@ -19,7 +19,7 @@ A tutorial for manim, a mathematical animation engine made by 3b1b
 
 ### Common-Problems
 
-## Running-Manim-Projects
+## Running Manim Projects
 
 ## Exploring-the-Repo
 
