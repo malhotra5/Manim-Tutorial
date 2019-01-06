@@ -4,12 +4,12 @@ A tutorial for manim, a mathematical animation engine made by 3b1b
 * [Installations](#Installations)
 * [Running Manim Projects](#Running-Manim-Projects)
 * [Exploring the repo](#Exploring-the-Repo)
-  * ManimLib
-    * Animations
-    * Mobjects
-      * Types
-    * Scene
-    * Utils
+  * [ManimLib](#ManimLib)
+    * [Animation](#Animations)
+    * [Mobject](#Mobjects)
+      * [Types](#Types)
+    * [Scene](#Scenes)
+    * [Utils](#Utils)
   * Media
   * Old_Projects
 * Putting it together
