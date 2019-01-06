@@ -30,9 +30,9 @@ Install by running the following commands on the terminal:
 
 ### Common-Problems
 * Problem #1: Cairo System requirement 
-People are sometimes unable to install cairo through the terminal. But, it is possible to install it using the Python. 
-    
-     pip3 install pycairo
+People are sometimes unable to install cairo through the terminal. But, it is possible to install it using the Python.
+
+    pip3 install pycairo
 
 ## Running-Manim-Projects
 
