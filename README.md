@@ -117,7 +117,8 @@ We will break this into parts:
 ### Shapes
 
 **Results on YouTube**
-[![Youtube video link](https://img.youtube.com/vi/kFCliVVACp4&index=2&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D/0.jpg)](https://www.youtube.com/watch?v=kFCliVVACp4&index=2&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D)
+[![Youtube video link](https://img.youtube.com/vi/kFCliVVACp4/0.jpg)](https://www.youtube.com/watch?v=kFCliVVACp4)
+
 ### Text
 
 **Results on YouTube**
