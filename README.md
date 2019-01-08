@@ -116,9 +116,20 @@ We will break this into parts:
 
 ### Shapes
 
+**Results on YouTube**
+[![Youtube video link](https://img.youtube.com/vi/kFCliVVACp4&index=2&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D/0.jpg)](https://www.youtube.com/watch?v=kFCliVVACp4&index=2&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D)
 ### Text
+
+**Results on YouTube**
+[![Youtube video link](https://img.youtube.com/vi/3pxIVQxlpRQ&index=3&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D/0.jpg)](https://www.youtube.com/watch?v=3pxIVQxlpRQ&index=3&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D)
 ### Math-Equations
+
+**Results on YouTube**
+[![Youtube video link](https://img.youtube.com/vi/k9U4VjqTyPA&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D&index=4/0.jpg)](https://www.youtube.com/watch?v=k9U4VjqTyPA&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D&index=4)
 ### Graphing
+
+**Results on YouTube**
+[![Youtube video link](https://img.youtube.com/vi/6IyImPGDVUc&index=5&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D/0.jpg)](https://www.youtube.com/watch?v=6IyImPGDVUc&index=5&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D)
 
 ## Exploring-the-Repo
 
