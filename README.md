@@ -110,27 +110,30 @@ We will break this into parts:
 
     python3 -m manim fileName.py Shapes -pl
     
-**Results on YouTube**
+**Click for results on YouTube**
 
 [![Youtube video link](https://img.youtube.com/vi/AYCJHLIlbW0/0.jpg)](https://www.youtube.com/watch?v=AYCJHLIlbW0)
 
 ### Shapes
 
-**Results on YouTube**
+**Click for results on YouTube**
+
 [![Youtube video link](https://img.youtube.com/vi/kFCliVVACp4/0.jpg)](https://www.youtube.com/watch?v=kFCliVVACp4)
 
 ### Text
 
-**Results on YouTube**
-[![Youtube video link](https://img.youtube.com/vi/3pxIVQxlpRQ&index=3&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D/0.jpg)](https://www.youtube.com/watch?v=3pxIVQxlpRQ&index=3&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D)
+**Click for results on YouTube**
+
+[![Youtube video link](https://img.youtube.com/vi/3pxIVQxlpRQ/0.jpg)](https://www.youtube.com/watch?v=3pxIVQxlpRQ)
 ### Math-Equations
 
-**Results on YouTube**
-[![Youtube video link](https://img.youtube.com/vi/k9U4VjqTyPA&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D&index=4/0.jpg)](https://www.youtube.com/watch?v=k9U4VjqTyPA&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D&index=4)
+**Click for results on YouTube**
+[![Youtube video link](https://img.youtube.com/vi/k9U4VjqTyPA/0.jpg)](https://www.youtube.com/watch?v=k9U4VjqTyPA)
 ### Graphing
 
-**Results on YouTube**
-[![Youtube video link](https://img.youtube.com/vi/6IyImPGDVUc&index=5&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D/0.jpg)](https://www.youtube.com/watch?v=6IyImPGDVUc&index=5&list=PL6U7lox_4-KzkK8aXe8LqZPfBGhUZUl5D)
+**Click for results on YouTube**
+
+[![Youtube video link](https://img.youtube.com/vi/6IyImPGDVUc/0.jpg)](https://www.youtube.com/watch?v=6IyImPGDVUc)
 
 ## Exploring-the-Repo
 
