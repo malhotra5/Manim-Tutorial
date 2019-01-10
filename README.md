@@ -186,8 +186,14 @@ For example: self.add() took the list. However, you have to unpack the list firs
 
     self.add(*pointers)
     
-Here, mobjects in the list pointers, we unpacked and passed as arguments to *add()*. Notice the syntax for doing so. We put a *asterisk* before the list.   
+Here, mobjects in the list pointers, we unpacked and passed as arguments to *add()*. Notice the syntax for doing so. We put * before the list.   
 
+Last note. If you realized, the base class of the class above was *Scene*. This is provided by manim. Using it, we can access methods pertaining to manim. Manim also has many other base classes that we can use. If you realize, the lines of code below come from the base class. 
+
+    self.add()
+    self.play()
+
+There are other bases classes we will explore for making Graphs, 3D Scenes,etc. 
 
 **Click for results on YouTube:** 
 
