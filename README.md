@@ -27,7 +27,7 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
   * [Media](#Media)
   * [Old_Projects](#Old_Projects)
 * [Putting it together](#Putting-it-together)
-* [YOUR GO TO GUIDE FOR EVERYDAY USE!!](#GO-TO-GUIDE)
+* [YOUR GO TO GUIDE FOR EVERYDAY USE!!]()
 * [Further Work](#Further-Work)
 * [Acknowledgements](#Acknowledgements)
 ## Installations
@@ -230,60 +230,6 @@ There are other bases classes we will explore for making Graphs, 3D Scenes,etc.
 ### Old_Projects
 ## Putting-it-together
 ## GO-TO-GUIDE!
-
-**Creations:**
-* ShowPartial
-* ShowCreation
-* Uncreate
-* DrawBordersThenFill
-* Write
-
-**Animations:**
-* FadeOut
-* FadeIn 
-* FadeInAndShiftFromDirection
-* FadeInFrom
-* FadeInFromDown
-* FadeOutAndShift
-* FadeOutAndShiftDown
-* VFadeIn
-* VFadeOut
-* GrowFromPoint
-* GrowFromCenter
-* GrowFromEdge
-* SpinInFromNothing
-* ShrinkToCenter
-
-**Indication:**
-* FocusOn
-* Indicate
-* CircleIndicate
-* ShowPassingFlash
-* ShowCreationThenDestruction
-* ApplyWave
-* WiggleOutThenIn
-* Vibrate
-* TurnInsideOut
-
-**Movement:** 
-* MoveAlongPath
-
-**Rotation:**
-* Rotate
-
-**Transformations:**
-* Transform
-* ReplacementTransform
-* TransformFromCopy
-* ClockwiseTransform
-* CounterclockwiseTransform
-* MoveToTarget
-* ApplyMethod
-* FadeToColor
-
-**Continous Animations:**
-* ContinualRotation
-* ContinualMovement
 
 ## Further-Work
 I am missing a lot of aspects behind this powerful library after reverse engineering manim. There are things such as 3D scenes that still need to be documented. But hopefully this guide will cater to your basic needs. 
