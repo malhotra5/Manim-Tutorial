@@ -230,7 +230,8 @@ There are other bases classes we will explore for making Graphs, 3D Scenes,etc.
 ### Old_Projects
 ## Putting-it-together
 ## GO-TO-GUIDE!
-Click the link below for your resource. 
+Click the link below for the guide. This guide is also a file in this repo.  
+
 [Manim Resource Guide](https://github.com/malhotra5/Manim-Tutorial/blob/master/GoToGuide.md)
 ## Further-Work
 I am missing a lot of aspects behind this powerful library after reverse engineering manim. There are things such as 3D scenes that still need to be documented. But hopefully this guide will cater to your basic needs. 
