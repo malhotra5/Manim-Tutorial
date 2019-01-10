@@ -164,6 +164,7 @@ The section for showing the animaton displays the shapes, as specified in the co
 * Rectangle
 * Lines
 * Annulus
+
 **Animations:** These are animations that apply to objects known as mobjects. Mobjects are objects defined by manim. Manim creates these objects specifically, so that you can apply any animations or other special manim methods to them. 
 * FadeIn 
 * Transform 
@@ -171,9 +172,11 @@ The section for showing the animaton displays the shapes, as specified in the co
 * GrowFromCenter
 
 **Animations2**
-**Click for results on YouTube:** These are some of the methods for adding mobjects or playing Animations on mobjects. Note: If you play an animation, you don't have to add it to the screen. The animation does it for you. 
+These are some of the methods for adding mobjects or playing Animations on mobjects. Note: If you play an animation, you don't have to add it to the screen. The animation does it for you. 
 * Play
 * Add
+
+**Click for results on YouTube:** 
 
 [![Youtube video link](https://img.youtube.com/vi/kFCliVVACp4/0.jpg)](https://www.youtube.com/watch?v=kFCliVVACp4)
 
