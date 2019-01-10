@@ -186,7 +186,7 @@ For example: self.add() took the list. However, you have to unpack the list firs
 
     self.add(*pointers)
     
-Here, mobjects in the list pointers, we unpacked and passed as arguments to *add()*. Notice the syntax for doing so. We put a * asterisk * before the list.   
+Here, mobjects in the list pointers, we unpacked and passed as arguments to *add()*. Notice the syntax for doing so. We put a *asterisk* before the list.   
 
 
 **Click for results on YouTube:** 
