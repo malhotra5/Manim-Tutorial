@@ -110,14 +110,33 @@ We will break this into parts:
 
     python3 -m manim fileName.py Shapes -pl
     
-**Results**
-<video src="results/Shapes.mp4" controls preload></video>
+**Click for results on YouTube:**
+
+[![Youtube video link](https://img.youtube.com/vi/AYCJHLIlbW0/0.jpg)](https://www.youtube.com/watch?v=AYCJHLIlbW0)
 
 ### Shapes
 
+**Click for results on YouTube:**
+
+[![Youtube video link](https://img.youtube.com/vi/kFCliVVACp4/0.jpg)](https://www.youtube.com/watch?v=kFCliVVACp4)
+
 ### Text
+
+**Click for results on YouTube:**
+
+[![Youtube video link](https://img.youtube.com/vi/3pxIVQxlpRQ/0.jpg)](https://www.youtube.com/watch?v=3pxIVQxlpRQ)
+
 ### Math-Equations
+
+**Click for results on YouTube:**
+
+[![Youtube video link](https://img.youtube.com/vi/k9U4VjqTyPA/0.jpg)](https://www.youtube.com/watch?v=k9U4VjqTyPA)
+
 ### Graphing
+
+**Click for results on YouTube:**
+
+[![Youtube video link](https://img.youtube.com/vi/6IyImPGDVUc/0.jpg)](https://www.youtube.com/watch?v=6IyImPGDVUc)
 
 ## Exploring-the-Repo
 
