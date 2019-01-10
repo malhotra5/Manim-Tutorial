@@ -158,7 +158,7 @@ You will see some methods such as *surround* or *FadeOut*, we wil classify them 
 
 The section for showing the animaton displays the shapes, as specified in the code. Let's look at the what the code offers.
 
-**SHAPES:** The shapes defined in manim are known as mobjects. Manim has this classification for objects other than shapes. Keep reading for the formal definition of a mobject. 
+**Shapes:** The shapes defined in manim are known as mobjects. Manim has this classification for objects other than shapes. Keep reading for the formal definition of a mobject. 
 * Square
 * Circle 
 * Rectangle
@@ -171,10 +171,23 @@ The section for showing the animaton displays the shapes, as specified in the co
 * FadeOut
 * GrowFromCenter
 
-**Animations2**
+**Adding:**
 These are some of the methods for adding mobjects or playing Animations on mobjects. Note: If you play an animation, you don't have to add it to the screen. The animation does it for you. 
 * Play
 * Add
+
+In this code, I specifically included an example that I ran across when using manim. Look at this line of code that is included above too.
+
+    pointers.append(Line(ORIGIN, np.array([cos(pi/180*360/8*i),sin(pi/180*360/8*i), 0]),color=YELLOW))
+    
+I am appending mobjects into an list. This way I can manipulate the mobjects in the list. However, some manim methods such as *FadeOut()* can't take multiple mobjects at once. This makes it hard to do multiple tasks with less lines of code. Some methods do however take multiple mobjects. 
+
+For example: self.add() took the list. However, you have to unpack the list first. 
+
+    self.add(*pointers)
+    
+Here, mobjects in the list pointers, we unpacked and passed as arguments to *add()*. Notice the syntax for doing so. We put a *** before the list.   
+
 
 **Click for results on YouTube:** 
 
