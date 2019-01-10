@@ -116,7 +116,64 @@ We will break this into parts:
 
 ### Shapes
 
-**Click for results on YouTube:**
+```
+from big_ol_pile_of_manim_imports import *
+from math import cos, sin, pi
+
+class Shapes(Scene):
+    def construct(self):
+        #######Code#######
+        #Making Shapes
+        circle = Circle(color=YELLOW)
+        square = Square(color=DARK_BLUE)
+        square.surround(circle)
+
+        rectangle = Rectangle(height=2, width=3, color=RED)
+        ring=Annulus(inner_radius=.2, outer_radius=1, color=BLUE)
+        ring2 = Annulus(inner_radius=0.6, outer_radius=1, color=BLUE)
+        ring3=Annulus(inner_radius=.2, outer_radius=1, color=BLUE)
+        ellipse=Ellipse(width=5, height=3, color=DARK_BLUE)
+
+        pointers = []
+        for i in range(8):
+            pointers.append(Line(ORIGIN, np.array([cos(pi/180*360/8*i),sin(pi/180*360/8*i), 0]),color=YELLOW))
+
+        #Showing animation
+        self.add(circle)
+        self.play(FadeIn(square))
+        self.play(Transform(square, rectangle))
+        self.play(FadeOut(circle), FadeIn(ring))
+        self.play(Transform(ring,ring2))
+        self.play(Transform(ring2, ring))
+        self.play(FadeOut(square), GrowFromCenter(ellipse), Transform(ring2, ring3))
+        self.add(*pointers)
+        self.wait(2)
+```
+After looking at a lot of pieces of code in this tutorial, you will eventually familiarize yourself with manim. So lets start!
+
+Our focus is going to shift from understanding the structure of our code, to understanding the code itself. The first import statement imports many of the classes we will use. 
+
+The section for making shapes creates shapes that can be used in manim. You can define it's size, color,etc. 
+You will see some methods such as *surround* or *FadeOut*, we wil classify them later. The code is simple enough to read, most of it looks like English. 
+
+The section for showing the animaton displays the shapes, as specified in the code. Let's look at the what the code offers.
+
+**SHAPES:** The shapes defined in manim are known as mobjects. Manim has this classification for objects other than shapes. Keep reading for the formal definition of a mobject. 
+* Square
+* Circle 
+* Rectangle
+* Lines
+* Annulus
+**Animations:** These are animations that apply to objects known as mobjects. Mobjects are objects defined by manim. Manim creates these objects specifically, so that you can apply any animations or other special manim methods to them. 
+* FadeIn 
+* Transform 
+* FadeOut
+* GrowFromCenter
+
+**Animations2**
+**Click for results on YouTube:** These are some of the methods for adding mobjects or playing Animations on mobjects. Note: If you play an animation, you don't have to add it to the screen. The animation does it for you. 
+* Play
+* Add
 
 [![Youtube video link](https://img.youtube.com/vi/kFCliVVACp4/0.jpg)](https://www.youtube.com/watch?v=kFCliVVACp4)
 
