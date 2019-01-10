@@ -267,6 +267,7 @@ There are other bases classes we will explore for making Graphs, 3D Scenes,etc.
 
 **Movement:** 
 * MoveAlongPath
+
 **Rotation:**
 * Rotate
 
