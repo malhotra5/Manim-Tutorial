@@ -41,6 +41,7 @@ Lets first get the repo for manim, using:
 We will start with installing some system requirements: Cairo, Latex, ffmpeg and sox. 
 
 Install by running the following commands on the terminal: 
+
 ``` bash
     sudo apt install SystemReq
 ```
