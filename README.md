@@ -34,31 +34,31 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
 This installation and guide is meant for linux users. We will start by installing prerequisites. 
 
 Lets first get the repo for manim, using:
-```python
+``` bash
     git clone https://github.com/3b1b/manim.git
 ```
 
 We will start with installing some system requirements: Cairo, Latex, ffmpeg and sox. 
 
 Install by running the following commands on the terminal: 
-```python
+``` bash
     sudo apt install SystemReq
 ```
 
 Some additional installations are mentioned below
-```python
+``` bash
     sudo apt-get install libcairo2-dev libjpeg-dev libgif-dev 
     sudo apt install texlive-latex-base texlive-full texlive-fonts-extra
 ```
 Phew! This will be the last isntallation for additional python modules. Run this in the terminal 
-```python
+``` bash
     python3 -m pip install -r requirements.txt
 ```
 
 ### Common-Problems
 * Problem #1: Cairo System requirement 
 People are sometimes unable to install cairo through the terminal. But, it is possible to install it using the Python.
-```python
+``` bash
         pip3 install pycairo
 ```
 
