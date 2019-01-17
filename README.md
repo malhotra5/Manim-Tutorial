@@ -34,28 +34,34 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
 This installation and guide is meant for linux users. We will start by installing prerequisites. 
 
 Lets first get the repo for manim, using:
-
+```python
     git clone https://github.com/3b1b/manim.git
+```
 
 We will start with installing some system requirements: Cairo, Latex, ffmpeg and sox. 
 
 Install by running the following commands on the terminal: 
-
+```python
     sudo apt install SystemReq
-    
-Some additional installations are mentioned below
+```
 
+Some additional installations are mentioned below
+```python
     sudo apt-get install libcairo2-dev libjpeg-dev libgif-dev 
     sudo apt install texlive-latex-base texlive-full texlive-fonts-extra
+```
 Phew! This will be the last isntallation for additional python modules. Run this in the terminal 
-  
+```python
     python3 -m pip install -r requirements.txt
-    
+```
+
 ### Common-Problems
 * Problem #1: Cairo System requirement 
 People are sometimes unable to install cairo through the terminal. But, it is possible to install it using the Python.
-
+```python
         pip3 install pycairo
+```
+
 * Problem #2: **Exception: Latex error converting to dvi. See log output above or the log file**
 This error can be frustrating. Especially when you don't know what to isntall. But if you followed my installation guide, this error is not due to missing a system requirement. Rather, there is a problem with the code.
 
@@ -63,13 +69,15 @@ This error can be frustrating. Especially when you don't know what to isntall. B
 This error occurs when you use the command to run a manim project when your not in the parent directory. Make sure that your current directory is in manim, and no other sub directory. 
 ## Running-Manim-Projects
 Easy way to test whether all your installations are working is by running the command below
-    
+```python    
     python3 -m manim example_scenes.py SquareToCircle -pl
-    
+```
+
 If it worked, then congratulations! Now you can run manim programs and get started with making animations. 
 Now, this will be the general command to run all manim projects
-
+```python
     python3 -m manim pythonFile.py className -args
+```
 
 **NOTE 1**: Your videos that you make are saved in the folder called *media*. \
 **NOTE 2**: The command for running the manim programs should only be run in the parent directory. 
@@ -82,7 +90,7 @@ I recommend to look at it later, and start with the tutorial.
 ## Tutorial!
 Finally we can start. In this tutorial, we will learn by doing. 
 ### Basics
-``` 
+``` python
 from big_ol_pile_of_manim_imports import *
 
 class Shapes(Scene):
