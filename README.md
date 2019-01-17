@@ -70,7 +70,7 @@ This error can be frustrating. Especially when you don't know what to isntall. B
 This error occurs when you use the command to run a manim project when your not in the parent directory. Make sure that your current directory is in manim, and no other sub directory. 
 ## Running-Manim-Projects
 Easy way to test whether all your installations are working is by running the command below
-```python    
+```bash
     python3 -m manim example_scenes.py SquareToCircle -pl
 ```
 
@@ -116,16 +116,16 @@ We will break this into parts:
 * Code: You don't have to fully understand how the code works yet. But you can see that you first define your animations, and then you display it. You can experiment with the order in which you define and display.
 
 **NOTE**: If you recall, to run this animation, you would run the following in the terminal - 
-
+```bash
     python3 -m manim fileName.py Shapes -pl
-    
+```
 **Click for results on YouTube:**
 
 [![Youtube video link](https://img.youtube.com/vi/AYCJHLIlbW0/0.jpg)](https://www.youtube.com/watch?v=AYCJHLIlbW0)
 
 ### Shapes
 
-```
+```python
 from big_ol_pile_of_manim_imports import *
 from math import cos, sin, pi
 
@@ -186,22 +186,22 @@ These are some of the methods for adding mobjects or playing Animations on mobje
 * Add
 
 In this code, I specifically included an example that I ran across when using manim. Look at this line of code that is included above too.
-
+``` python
     pointers.append(Line(ORIGIN, np.array([cos(pi/180*360/8*i),sin(pi/180*360/8*i), 0]),color=YELLOW))
-    
+```
 I am appending mobjects into an list. This way I can manipulate the mobjects in the list. However, some manim methods such as *FadeOut()* can't take multiple mobjects at once. This makes it hard to do multiple tasks with less lines of code. Some methods do however take multiple mobjects. 
 
 For example: self.add() took the list. However, you have to unpack the list first. 
-
+```python
     self.add(*pointers)
-    
+```
 Here, mobjects in the list pointers, we unpacked and passed as arguments to *add()*. Notice the syntax for doing so. We put * before the list.   
 
 Last note. If you realized, the base class of the class above was *Scene*. This is provided by manim. Using it, we can access methods pertaining to manim. Manim also has many other base classes that we can use. If you realize, the lines of code below come from the base class. 
-
+```python
     self.add()
     self.play()
-
+```
 There are other bases classes we will explore for making Graphs, 3D Scenes,etc. 
 
 **Click for results on YouTube:** 
