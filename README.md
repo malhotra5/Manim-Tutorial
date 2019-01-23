@@ -185,7 +185,7 @@ These are some of the methods for adding mobjects or playing Animations on mobje
 * Play
 * Add
 
-In this code, I specifically included an example that I ran across when using manim. Look at this line of code that is included above too.
+In this code, I specifically included an example that I found useful to know. 
 ``` python
     pointers.append(Line(ORIGIN, np.array([cos(pi/180*360/8*i),sin(pi/180*360/8*i), 0]),color=YELLOW))
 ```
@@ -210,17 +210,135 @@ There are other bases classes we will explore for making Graphs, 3D Scenes,etc.
 
 ### Text
 
+```python
+from big_ol_pile_of_manim_imports import *
+
+class makeText(Scene):
+    def construct(self):
+        #######Code#######
+        #Making text
+        first_line = TextMobject("Manim is fun")
+        second_line = TextMobject("and useful")
+        final_line = TextMobject("Hope you like it too!", color=BLUE)
+        color_final_line = TextMobject("Hope you like it too!")
+
+        #Coloring
+        color_final_line.set_color_by_gradient(BLUE,PURPLE)
+
+        #Position text
+        second_line.next_to(first_line, DOWN)
+
+        #Showing text
+        self.wait(1)
+        self.play(Write(first_line), Write(second_line))
+        self.wait(1)
+        self.play(FadeOut(second_line), ReplacementTransform(first_line, final_line))
+        self.wait(1)
+        self.play(Transform(final_line, color_final_line))
+        self.wait(2)
+```
+
+Hopefully, most of the code makes sense. In this section I'll introduce a new mobject known as TextMobject. It is used to store text. It is particulary useful because it helps you position text on the screen and you can use the animation *write()*. 
+
+I also included a nice coloring tool, *set_color_by_gradient*. You can pass constants in Manim such as *BLUE* or *PURPLE*. To pass a custom color you can specify the hex code of the color instead of using Manim color constants. 
+
+TextMobjects will be used later on to write good looking math equations. 
+
 **Click for results on YouTube:**
 
 [![Youtube video link](https://img.youtube.com/vi/3pxIVQxlpRQ/0.jpg)](https://www.youtube.com/watch?v=3pxIVQxlpRQ)
 
 ### Math-Equations
 
+```python
+
+from big_ol_pile_of_manim_imports import *
+
+class Equations(Scene):
+    def construct(self):
+        #Making equations
+        first_eq = TextMobject("$$J(\\theta) = -\\frac{1}{m} [\\sum_{i=1}^{m} y^{(i)} \\log{h_{\\theta}(x^{(i)})} + (1-y^{(i)}) \\log{(1-h_{\\theta}(x^{(i)}))}] $$")
+        second_eq = ["$J(\\theta_{0}, \\theta_{1})$", "=", "$\\frac{1}{2m}$", "$\\sum\\limits_{i=1}^m$", "(", "$h_{\\theta}(x^{(i)})$", "-", "$y^{(i)}$", "$)^2$"]
+
+        second_mob = TextMobject(*second_eq)
+
+        for i,item in enumerate(second_mob):
+            if(i != 0):
+                item.next_to(second_mob[i-1],RIGHT)
+
+        eq2 = VGroup(*second_mob)
+
+        des1 = TextMobject("With manim, you can write complex equations like this...")
+        des2 = TextMobject("Or this...")
+        des3 = TextMobject("And it looks nice!!")
+
+        #Coloring equations
+        second_mob.set_color_by_gradient("#33ccff","#ff00ff")
+
+        #Positioning equations
+        des1.shift(2*UP)
+        des2.shift(2*UP)
+
+        #Animating equations
+        self.play(Write(des1))
+        self.play(Write(first_eq))
+        self.play(ReplacementTransform(des1, des2), Transform(first_eq, eq2))
+        self.wait(1)
+
+        for i, item in enumerate(eq2):
+            if (i<2):
+                eq2[i].set_color(color=PURPLE)
+            else:
+                eq2[i].set_color(color="#00FFFF")
+
+        self.add(eq2)
+        self.wait(1)
+        self.play(FadeOutAndShiftDown(eq2), FadeOutAndShiftDown(first_eq), Transform(des2, des3))
+        self.wait(2)
+
+```
+
+That looks long, but it's very simple. Here I have provided 2 ways of making equation and displaying it to the screen. 
 **Click for results on YouTube:**
 
 [![Youtube video link](https://img.youtube.com/vi/k9U4VjqTyPA/0.jpg)](https://www.youtube.com/watch?v=k9U4VjqTyPA)
 
 ### Graphing
+
+
+Here is the default dictionary Manim uses for graphing. 
+```python
+
+CONFIG = {
+"x_min": -1,
+"x_max": 10,
+"x_axis_width": 9,
+"x_tick_frequency": 1,
+"x_leftmost_tick": None, # Change if different from x_min
+"x_labeled_nums": None,
+"x_axis_label": "$x$",
+"y_min": -1,
+"y_max": 10,
+"y_axis_height": 6,
+"y_tick_frequency": 1,
+"y_bottom_tick": None, # Change if different from y_min
+"y_labeled_nums": None,
+"y_axis_label": "$y$",
+"axes_color": GREY,
+"graph_origin": 2.5 * DOWN + 4 * LEFT,
+"exclude_zero_label": True,
+"num_graph_anchor_points": 25,
+"default_graph_colors": [BLUE, GREEN, YELLOW],
+"default_derivative_color": GREEN,
+"default_input_color": YELLOW,
+"default_riemann_start_color": BLUE,
+"default_riemann_end_color": GREEN,
+"area_opacity": 0.8,
+"num_rects": 50,
+}
+
+```
+
 
 **Click for results on YouTube:**
 
