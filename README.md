@@ -16,7 +16,7 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
   * [Text](#Text)
   * [Math Equations](#Math-Equations)
   * [Graphing](#Graphing)
-  
+* [YOUR GO TO GUIDE FOR EVERYDAY USE!!](#GO-TO-GUIDE)
 * [Exploring the repo](#Exploring-the-Repo)
   * [ManimLib](#ManimLib)
     * [Animation](#Animations)
@@ -27,7 +27,6 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
   * [Media](#Media)
   * [Old_Projects](#Old_Projects)
 * [Putting it together](#Putting-it-together)
-* [YOUR GO TO GUIDE FOR EVERYDAY USE!!](#GO-TO-GUIDE)
 * [Further Work](#Further-Work)
 * [Acknowledgements](#Acknowledgements)
 ## Installations
@@ -400,6 +399,9 @@ CONFIG = {
 
 [![Youtube video link](https://img.youtube.com/vi/6IyImPGDVUc/0.jpg)](https://www.youtube.com/watch?v=6IyImPGDVUc)
 
+## GO-TO-GUIDE!
+Click the link below for the guide.  
+
 ## Exploring-the-Repo
 
 ### ManimLib
@@ -411,9 +413,9 @@ CONFIG = {
 
 ### Media
 ### Old_Projects
+
 ## Putting-it-together
-## GO-TO-GUIDE!
-Click the link below for the guide.  
+
 
 [Manim Resource Guide](https://github.com/malhotra5/Manim-Guide)
 
