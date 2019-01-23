@@ -299,6 +299,7 @@ class Equations(Scene):
 ```
 
 That looks long, but it's very simple. Here I have provided 2 ways of making equation and displaying it to the screen. 
+
 **Click for results on YouTube:**
 
 [![Youtube video link](https://img.youtube.com/vi/k9U4VjqTyPA/0.jpg)](https://www.youtube.com/watch?v=k9U4VjqTyPA)
