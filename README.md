@@ -297,8 +297,13 @@ class Equations(Scene):
         self.wait(2)
 
 ```
+Here, we will  look at very important concepts that will help when using Manim. 
 
-That looks long, but it's very simple. Here I have provided 2 ways of making equation and displaying it to the screen. 
+That looks long, but it's very simple. Here I have provided 2 ways of making equation and displaying it to the screen. If you remember, we installed some latex system requirements. We will use LaTex to make our equations look nice. 
+
+LaTex will take it's own tutorial. However, you don't need to know a lot of LaTex. I will introduce some rules that will help you write any math equation. 
+
+
 
 **Click for results on YouTube:**
 
