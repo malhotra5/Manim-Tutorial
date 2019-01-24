@@ -300,9 +300,38 @@ Here, we will  look at very important concepts that will help when using Manim.
 
 That looks long, but it's very simple. Here I have provided 2 ways of making equation and displaying it to the screen. If you remember, we installed some latex system requirements. We will use LaTex to make our equations look nice. 
 
-LaTex will take it's own tutorial. However, you don't need to know a lot of LaTex. I will introduce some rules that will help you write any math equation. 
+LaTex will take it's own tutorial. However, you don't need to know a lot of LaTex. I will introduce some rules that will help you write any math equation. Notice that equations are specified in TextMobjects. 
 
+**LaTex:** When making an equation, the general rule is to put a *$* at the start and end of the text. For example:
+```python
+text = TextMobject("This is text") #Normal text
+equation = TextMobject("$X$") #This is an equation X
+```
 
+Now for the fun part. In LaTex, you can represent symbols using a backslash and a keyword. THis include theta, alpha, summation, etc. In Manim, it is similar. 
+
+```python
+theta = TextMobject("$\\theta$")
+```
+Notice, in Manim, you specify symbols by putting 2 backslash before the keyword. 
+
+Finally, the I will introduce the syntax for adding subscripts and superscripts. Here is the syntax for superscripts. 
+
+```python
+superScript_equation = TextMobject("$r^{\\theta}$")
+```
+
+The ^ symbol signifies superscript. We put the symbol theta as the superscript. Also, when specifying superscript the {} brackets are not displayed in the equation. They help group all the elements you want to add to the superscript. 
+
+For subscripts, it is similar. 
+
+```python
+subScript_equation = TextMobject("$\\theta_{1}$")
+```
+
+This is theta subscript 1. The _ signifies subscript. Like usual, the {} brackets aren't displayed in the equation. 
+
+Now, we will look at a complex way of writing equations using VGroup. 
 
 **Click for results on YouTube:**
 
