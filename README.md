@@ -27,6 +27,7 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
   * [Media](#Media)
   * [Old_Projects](#Old_Projects)
 * [Putting it together](#Putting-it-together)
+* [Resources](#Resources)
 * [Further Work](#Further-Work)
 * [Acknowledgements](#Acknowledgements)
 ## Installations
@@ -445,6 +446,7 @@ Click the link below for the guide.
 
 ## Putting-it-together
 
+## Resources
 
 [Manim Resource Guide](https://github.com/malhotra5/Manim-Guide)
 
