@@ -449,8 +449,8 @@ Click the link below for the guide.
 ## Resources
 * Latex
   * https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols
-
-[Manim Resource Guide](https://github.com/malhotra5/Manim-Guide)
+* Manim Guide
+  * [Manim Resource Guide](https://github.com/malhotra5/Manim-Guide)
 
 ## Further-Work
 I am missing a lot of aspects behind this powerful library after reverse engineering manim. There are things such as 3D scenes that still need to be documented. But hopefully this guide will cater to your basic needs. 
