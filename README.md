@@ -434,8 +434,7 @@ CONFIG = {
 [![Youtube video link](https://img.youtube.com/vi/6IyImPGDVUc/0.jpg)](https://www.youtube.com/watch?v=6IyImPGDVUc)
 
 ## GO-TO-GUIDE!
-Click the link below for the guide.  
-
+[Click Here For the Guide](https://github.com/malhotra5/Manim-Guide)
 ## Exploring-the-Repo
 
 ### ManimLib
