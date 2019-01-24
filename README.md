@@ -16,6 +16,8 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
   * [Text](#Text)
   * [Math Equations](#Math-Equations)
   * [Graphing](#Graphing)
+  * [3D Graphing](#3D-Graphing)
+  * [Images](#Images)
 * [YOUR GO TO GUIDE FOR EVERYDAY USE!!](#GO-TO-GUIDE)
 * [Exploring the repo](#Exploring-the-Repo)
   * [ManimLib](#ManimLib)
@@ -423,7 +425,9 @@ CONFIG = {
 }
 
 ```
+### 3D Graphing
 
+### Images
 
 **Click for results on YouTube:**
 
@@ -445,7 +449,9 @@ Click the link below for the guide.
 ### Old_Projects
 
 ## Putting-it-together
+Manim is extremely powerful, and is capable of creating high quality graphics. You can make your animations using graphics and then overlay your voice over the video. 
 
+If you were able to follow this tutorial successfully, then Congrats! Hopefully you can profiently use Manim! 
 ## Resources
 * Latex
   * https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols
