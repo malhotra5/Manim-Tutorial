@@ -330,7 +330,7 @@ For subscripts, it is similar.
 subScript_equation = TextMobject("$\\theta_{1}$")
 ```
 
-This is theta subscript 1. The _ signifies subscript. Like usual, the {} brackets aren't displayed in the equation. 
+This is theta subscript 1. The _ signifies subscript. Like usual, the {} brackets aren't displayed in the equation. For more symbol options, go to the [resources](#Resources) section. 
 
 Now, we will look at a complex way of writing equations using VGroup. 
 
@@ -447,6 +447,8 @@ Click the link below for the guide.
 ## Putting-it-together
 
 ## Resources
+* Latex
+  * https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols
 
 [Manim Resource Guide](https://github.com/malhotra5/Manim-Guide)
 
