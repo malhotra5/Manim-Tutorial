@@ -338,8 +338,13 @@ Now, we will look at a complex way of writing equations using VGroup. Let's look
 
 A VGroup is a list of mobjects who to which you can apply animations all at once. For example, if you have a list of circles, you could transform all of them into squares, by only transforming the VGroup. 
 
-Capabilities: You can animate all the mobjects at once, you can animate specific mobjects by indexing them. 
+Capabilities: You can animate all the mobjects at once, you can animate specific mobjects by indexing them in their list. 
 
+Let's look at the example where we make a VGroup for the math equation. 
+
+```python
+second_eq = ["$J(\\theta_{0}, \\theta_{1})$", "=", "$\\frac{1}{2m}$", "$\\sum\\limits_{i=1}^m$", "(", "$h_{\\theta}(x^{(i)})$", "-", "$y^{(i)}$", "$)^2$"]
+```
 
 
 **Click for results on YouTube:**
