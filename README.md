@@ -334,7 +334,13 @@ subScript_equation = TextMobject("$\\theta_{1}$")
 
 This is theta subscript 1. The _ signifies subscript. Like usual, the {} brackets aren't displayed in the equation. For more symbol options, go to the [resources](#Resources) section. 
 
-Now, we will look at a complex way of writing equations using VGroup. 
+Now, we will look at a complex way of writing equations using VGroup. Let's look at what a VGroup is.
+
+A VGroup is a list of mobjects who to which you can apply animations all at once. For example, if you have a list of circles, you could transform all of them into squares, by only transforming the VGroup. 
+
+Capabilities: You can animate all the mobjects at once, you can animate specific mobjects by indexing them. 
+
+
 
 **Click for results on YouTube:**
 
