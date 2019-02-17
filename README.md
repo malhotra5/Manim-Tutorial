@@ -436,13 +436,17 @@ CONFIG = {
 }
 
 ```
-### 3D Graphing
 
-### Images
 
 **Click for results on YouTube:**
 
 [![Youtube video link](https://img.youtube.com/vi/6IyImPGDVUc/0.jpg)](https://www.youtube.com/watch?v=6IyImPGDVUc)
+
+
+### 3D Graphing
+
+### Images
+
 
 ## GO-TO-GUIDE!
 [Click Here For the Guide](https://github.com/malhotra5/Manim-Guide)
