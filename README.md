@@ -454,10 +454,10 @@ from big_ol_pile_of_manim_imports import *
 class Images(Scene):
     def construct(self):
         img = ImageMobject('pathToIm.png')
-        img.scale(2) #Resize to be twice as big
-        img.shift(2*UP) #Move the image 
-        
-        self.play(ShowCreation(img)) #Display the image
+        img.scale(2)  # Resize to be twice as big
+        img.shift(2 * UP)  # Move the image
+
+        self.play(ShowCreation(img))  # Display the image
         
         
 ```
@@ -471,11 +471,11 @@ import cv2
 class Images(Scene):
     def construct(self):
         img = cv2.imread('pathToImg.png')
-        imMob = ImageMobject(img) #Makes an image mobject of existing image
-        
+        imMob = ImageMobject(img)  # Makes an image mobject of existing image
+
         imMob.scale(2)
-        imMob.shift(2*UP)
-        
+        imMob.shift(2 * UP)
+
         self.play(ShowCreation(imMob))
 ```
 
