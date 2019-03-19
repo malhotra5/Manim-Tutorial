@@ -446,7 +446,38 @@ CONFIG = {
 ### 3D Graphing
 
 ### Images
+Manim has a mobject made for images. You can resise them, invert their colors, etc by using Manim methods. 
 
+```python
+from big_ol_pile_of_manim_imports import *
+
+class Images(Scene):
+    def construct(self):
+        img = ImageMobject('pathToIm.png')
+        img.scale(2) #Resize to be twice as big
+        img.shift(2*UP) #Move the image 
+        
+        self.play(ShowCreation(img)) #Display the image
+        
+        
+```
+
+Alternatively, you could load the image using OpenCV or PIL, and then display the image using Manim.
+
+```python
+from big_ol_pile_of_manim_imports import *
+import cv2
+
+class Images(Scene):
+    def construct(self):
+        img = cv2.imread('pathToImg.png')
+        imMob = ImageMobject(img) #Makes an image mobject of existing image
+        
+        imMob.scale(2)
+        imMob.shift(2*UP)
+        
+        self.play(ShowCreation(imMob))
+```
 
 ## GO-TO-GUIDE!
 [Click Here For the Guide](https://github.com/malhotra5/Manim-Guide)
