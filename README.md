@@ -447,7 +447,7 @@ CONFIG = {
 
 **Click for results on YouTube:**
 
-[![Youtube video link](https://img.youtube.com/vi/XMEQRshlp4/0.jpg)](https://www.youtube.com/watch?v=_XMEQRshlp4)
+[![Youtube video link](https://img.youtube.com/vi/_XMEQRshlp4/0.jpg)](https://www.youtube.com/watch?v=_XMEQRshlp4)
 
 ### Images
 Manim has a mobject made for images. You can resise them, invert their colors, etc by using Manim methods. 
