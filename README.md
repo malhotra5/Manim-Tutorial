@@ -445,6 +445,10 @@ CONFIG = {
 
 ### 3D Graphing
 
+**Click for results on YouTube:**
+
+[![Youtube video link](https://img.youtube.com/vi/6IyImPGDVUc/0.jpg)](https://www.youtube.com/watch?v=_XMEQRshlp4&feature=youtu.be)
+
 ### Images
 Manim has a mobject made for images. You can resise them, invert their colors, etc by using Manim methods. 
 
