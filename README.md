@@ -463,8 +463,6 @@ class ThreedSurface(ParametricSurface):
     def func(self, x, y):
         return np.array([x,y,x**2 - y**2])
 
-    def tangentX(self, x, y):
-        return 2*x
         
 class Test(ThreeDScene):
 
@@ -483,6 +481,12 @@ class Test(ThreeDScene):
         self.begin_ambient_camera_rotation()
         self.wait(9)
 ```
+
+Alright! Finally some 3D graphs. So, the first ThreeDSurface inherits from parametric surfaces. This will be used to define our 3D graph in terms of a mathematical equation. The **kwargs** parameter are just some tweaks that change the color of the the graph, or how much of the graph should be rendered. The method **func** defines the function. It returns the **z** given the x and y parameters (which are required for 3D graphs). 
+
+The ThreeDSurface is called in the Test class and is manipulated like a mobject. 
+
+A continuation of this tutorial will follow to explain how the camera works. For now, the camera is basically your eyes. 
 
 **Click for results on YouTube:**
 
