@@ -53,7 +53,7 @@ Some additional installations are mentioned below
     sudo apt-get install libcairo2-dev libjpeg-dev libgif-dev 
     sudo apt install texlive-latex-base texlive-full texlive-fonts-extra
 ```
-Phew! This will be the last isntallation for additional python modules. Run this in the terminal 
+Phew! This will be the last installation for additional python modules. Run this in the terminal 
 ``` bash
     python3 -m pip install -r requirements.txt
 ```
@@ -94,7 +94,7 @@ I recommend to look at it later, and start with the tutorial.
 Finally we can start. In this tutorial, we will learn by doing. 
 ### Basics
 ``` python
-from big_ol_pile_of_manim_imports import *
+from manimlib.imports import *
 
 class Shapes(Scene):
     def construct(self):
@@ -128,7 +128,7 @@ We will break this into parts:
 ### Shapes
 
 ```python
-from big_ol_pile_of_manim_imports import *
+from manimlib.imports import *
 from math import cos, sin, pi
 
 class Shapes(Scene):
@@ -213,7 +213,7 @@ There are other bases classes we will explore for making Graphs, 3D Scenes,etc.
 ### Text
 
 ```python
-from big_ol_pile_of_manim_imports import *
+from manimlib.imports import *
 
 class makeText(Scene):
     def construct(self):
@@ -254,7 +254,7 @@ TextMobjects will be used later on to write good looking math equations.
 
 ```python
 
-from big_ol_pile_of_manim_imports import *
+from manimlib.imports import *
 
 class Equations(Scene):
     def construct(self):
@@ -354,7 +354,7 @@ second_eq = ["$J(\\theta_{0}, \\theta_{1})$", "=", "$\\frac{1}{2m}$", "$\\sum\\l
 ### Graphing
 
 ```python
-from big_ol_pile_of_manim_imports import *
+from manimlib.imports import *
 import math
 
 class Graphing(GraphScene):
@@ -446,7 +446,7 @@ CONFIG = {
 ### 3D Graphing
 
 ```python
-from big_ol_pile_of_manim_imports import *
+from manimlib.imports import *
 
 class ThreedSurface(ParametricSurface):
 
@@ -496,7 +496,7 @@ A continuation of this tutorial will follow to explain how the camera works. For
 Manim has a mobject made for images. You can resise them, invert their colors, etc by using Manim methods. 
 
 ```python
-from big_ol_pile_of_manim_imports import *
+from manimlib.imports import *
 
 class Images(Scene):
     def construct(self):
@@ -512,7 +512,7 @@ class Images(Scene):
 Alternatively, you could load the image using OpenCV or PIL, and then display the image using Manim.
 
 ```python
-from big_ol_pile_of_manim_imports import *
+from manimlib.imports import *
 import cv2
 
 class Images(Scene):
