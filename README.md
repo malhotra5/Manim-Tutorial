@@ -53,7 +53,7 @@ Some additional installations are mentioned below
     sudo apt-get install libcairo2-dev libjpeg-dev libgif-dev 
     sudo apt install texlive-latex-base texlive-full texlive-fonts-extra
 ```
-Phew! This will be the last isntallation for additional python modules. Run this in the terminal 
+Phew! This will be the last installation for additional python modules. Run this in the terminal 
 ``` bash
     python3 -m pip install -r requirements.txt
 ```
