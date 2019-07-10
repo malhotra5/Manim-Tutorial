@@ -123,13 +123,13 @@ from manimlib.imports import *
 
 class Shapes(Scene):
     def construct(self):
-        ######Code######
-        #Making shapes
+        ###### Code ######
+        # Making shapes
         circle = Circle()
         square = Square()
         triangle=Polygon(np.array([0,0,0]),np.array([1,1,0]),np.array([1,-1,0]))
 
-        #Showing shapes
+        # Showing shapes
         self.play(ShowCreation(circle))
         self.play(FadeOut(circle))
         self.play(GrowFromCenter(square))
@@ -160,8 +160,8 @@ from math import cos, sin, pi
 
 class Shapes(Scene):
     def construct(self):
-        #######Code#######
-        #Making Shapes
+        ####### Code #######
+        # Making Shapes
         circle = Circle(color=YELLOW)
         square = Square(color=DARK_BLUE)
         square.surround(circle)
@@ -176,7 +176,7 @@ class Shapes(Scene):
         for i in range(8):
             pointers.append(Line(ORIGIN, np.array([cos(pi/180*360/8*i),sin(pi/180*360/8*i), 0]),color=YELLOW))
 
-        #Showing animation
+        # Showing animation
         self.add(circle)
         self.play(FadeIn(square))
         self.play(Transform(square, rectangle))
@@ -243,20 +243,20 @@ from manimlib.imports import *
 
 class makeText(Scene):
     def construct(self):
-        #######Code#######
-        #Making text
+        ####### Code #######
+        # Making text
         first_line = TextMobject("Manim is fun")
         second_line = TextMobject("and useful")
         final_line = TextMobject("Hope you like it too!", color=BLUE)
         color_final_line = TextMobject("Hope you like it too!")
 
-        #Coloring
+        # Coloring
         color_final_line.set_color_by_gradient(BLUE,PURPLE)
 
-        #Position text
+        # Position text
         second_line.next_to(first_line, DOWN)
 
-        #Showing text
+        # Showing text
         self.wait(1)
         self.play(Write(first_line), Write(second_line))
         self.wait(1)
@@ -284,7 +284,7 @@ from manimlib.imports import *
 
 class Equations(Scene):
     def construct(self):
-        #Making equations
+        # Making equations
         first_eq = TextMobject("$$J(\\theta) = -\\frac{1}{m} [\\sum_{i=1}^{m} y^{(i)} \\log{h_{\\theta}(x^{(i)})} + (1-y^{(i)}) \\log{(1-h_{\\theta}(x^{(i)}))}] $$")
         second_eq = ["$J(\\theta_{0}, \\theta_{1})$", "=", "$\\frac{1}{2m}$", "$\\sum\\limits_{i=1}^m$", "(", "$h_{\\theta}(x^{(i)})$", "-", "$y^{(i)}$", "$)^2$"]
 
@@ -300,14 +300,14 @@ class Equations(Scene):
         des2 = TextMobject("Or this...")
         des3 = TextMobject("And it looks nice!!")
 
-        #Coloring equations
+        # Coloring equations
         second_mob.set_color_by_gradient("#33ccff","#ff00ff")
 
         #Positioning equations
         des1.shift(2*UP)
         des2.shift(2*UP)
 
-        #Animating equations
+        # Animating equations
         self.play(Write(des1))
         self.play(Write(first_eq))
         self.play(ReplacementTransform(des1, des2), Transform(first_eq, eq2))
@@ -413,7 +413,7 @@ class Graphing(GraphScene):
 
         point = Dot(self.coords_to_point(1,self.func_to_graph(1)))
 
-        #Display graph
+        # Display graph
         self.play(ShowCreation(func_graph), Write(graph_lab))
         self.wait(1)
         self.play(ShowCreation(vert_line))
@@ -432,37 +432,37 @@ class Graphing(GraphScene):
 ```
 
 
-Here is the default dictionary Manim uses for graphing. 
+Here is the default dictionary Manim uses for graphing. Refer to [`manimlib/scene/graph_scene.py`][graph_scene_src]
+
+[graph_scene_src]: https://github.com/3b1b/manim/blob/master/manimlib/scene/graph_scene.py`
 ```python
-
 CONFIG = {
-"x_min": -1,
-"x_max": 10,
-"x_axis_width": 9,
-"x_tick_frequency": 1,
-"x_leftmost_tick": None, # Change if different from x_min
-"x_labeled_nums": None,
-"x_axis_label": "$x$",
-"y_min": -1,
-"y_max": 10,
-"y_axis_height": 6,
-"y_tick_frequency": 1,
-"y_bottom_tick": None, # Change if different from y_min
-"y_labeled_nums": None,
-"y_axis_label": "$y$",
-"axes_color": GREY,
-"graph_origin": 2.5 * DOWN + 4 * LEFT,
-"exclude_zero_label": True,
-"num_graph_anchor_points": 25,
-"default_graph_colors": [BLUE, GREEN, YELLOW],
-"default_derivative_color": GREEN,
-"default_input_color": YELLOW,
-"default_riemann_start_color": BLUE,
-"default_riemann_end_color": GREEN,
-"area_opacity": 0.8,
-"num_rects": 50,
+    "x_min": -1,
+    "x_max": 10,
+    "x_axis_width": 9,
+    "x_tick_frequency": 1,
+    "x_leftmost_tick": None, # Change if different from x_min
+    "x_labeled_nums": None,
+    "x_axis_label": "$x$",
+    "y_min": -1,
+    "y_max": 10,
+    "y_axis_height": 6,
+    "y_tick_frequency": 1,
+    "y_bottom_tick": None, # Change if different from y_min
+    "y_labeled_nums": None,
+    "y_axis_label": "$y$",
+    "axes_color": GREY,
+    "graph_origin": 2.5 * DOWN + 4 * LEFT,
+    "exclude_zero_label": True,
+    "num_graph_anchor_points": 25,
+    "default_graph_colors": [BLUE, GREEN, YELLOW],
+    "default_derivative_color": GREEN,
+    "default_input_color": YELLOW,
+    "default_riemann_start_color": BLUE,
+    "default_riemann_end_color": GREEN,
+    "area_opacity": 0.8,
+    "num_rects": 50,
 }
-
 ```
 
 
@@ -529,8 +529,8 @@ from manimlib.imports import *
 class Images(Scene):
     def construct(self):
         img = ImageMobject('pathToIm.png')
-        img.scale(2)  # Resize to be twice as big
-        img.shift(2 * UP)  # Move the image
+        img.scale(2)                  # Resize to be twice as big
+        img.shift(2 * UP)             # Move the image
 
         self.play(ShowCreation(img))  # Display the image
 ```
