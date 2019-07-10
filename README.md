@@ -1,11 +1,11 @@
 # Manim-Tutorial
 A tutorial for manim, a mathematical animation engine made by 3b1b for Python. 
-## Requirements
-* Python 3.7 (I managed to run it on version 3.6.7, so I'm guessing 3.6 and above works)
-* Linux 
+
 ## Table of Contents
 * [Installations](#Installations)
-  * [Common Problems](#Common-Problems)
+  * [Linux](#Linux)
+  * [Mac OSX](#Mac-OSX)
+  * [Common Problems during Installation](#Common-Problems-during-Installation)
 * [Running Manim Projects](#Running-Manim-Projects)
   * [What ClassName means](#classNames)
   * [What are the possible args](#Args)
@@ -32,66 +32,91 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
 * [Resources](#Resources)
 * [Further Work](#Further-Work)
 * [Acknowledgements](#Acknowledgements)
+
 ## Installations
-This installation and guide is meant for linux users. We will start by installing prerequisites. 
 
-Lets first get the repo for manim, using:
-``` bash
-    git clone https://github.com/3b1b/manim.git
-```
+Assuming you have Python 3 installed and set up properly on your machine.
 
+Since [a commit][commit] by [@JohnAZoidberg][committer] in April, manim has been made installable using Python's tool `pip`, so the installation process is much simpler than before.
+
+[commit]: https://github.com/3b1b/manim/commit/2a6918cc30336544856a68f065a21ba2b769b01c
+[committer]: https://github.com/JohnAZoidberg
+
+### Linux
 We will start with installing some system requirements: Cairo, Latex, ffmpeg and sox. 
 
-Install by running the following commands on the terminal: 
-
-``` bash
-    sudo apt install SystemReq
+```shell
+$ sudo apt-get install libcairo2-dev libjpeg-dev libgif-dev 
+$ sudo apt-get install texlive-latex-base texlive-full texlive-fonts-extra
 ```
 
-Some additional installations are mentioned below
-``` bash
-    sudo apt-get install libcairo2-dev libjpeg-dev libgif-dev 
-    sudo apt install texlive-latex-base texlive-full texlive-fonts-extra
+After having these libraries and tools installed in your computer, you can now type this command to finish the last step of the installation
+```shell
+$ pip3 install manim
 ```
-Phew! This will be the last installation for additional python modules. Run this in the terminal 
-``` bash
-    python3 -m pip install -r requirements.txt
-```
+> Don't worry, `pip` automatically gathers Python dependencies of manim
 
-### Common-Problems
-* Problem #1: Cairo System requirement 
-People are sometimes unable to install cairo through the terminal. But, it is possible to install it using the Python.
-``` bash
-        pip3 install pycairo
+### Mac OSX
+A popular package manager called [HomeBrew][brew_website] is recommended for coding on a Mac because you do not have to go to App Store to or download dmg files from websites.
+
+To support rendering SVG files when creating videos, you need to install MacTex either by downloading from [its website][mactex_website] or using HomeBrew:
+```shell
+$ brew cask install mactex
 ```
 
-* Problem #2: **Exception: Latex error converting to dvi. See log output above or the log file**
-This error can be frustrating. Especially when you don't know what to isntall. But if you followed my installation guide, this error is not due to missing a system requirement. Rather, there is a problem with the code.
+At last, use `pip` to install your manim:
+```shell
+$ pip3 install manim
+```
 
-* Problem #3: **No module named manim** 
+[brew_website]: https://brew.sh
+[mactex_website]: https://www.tug.org/mactex/
+
+### Common Problems
+1. Cairo System requirement 
+
+People are sometimes unable to install cairo through the terminal, but luckily Python can help us fix this:
+```shell
+$ pip3 install pycairo
+```
+
+2. `Exception: Latex error converting to dvi. See log output above or the log file`
+
+This error can be frustrating especially when you don't know what to install. But if you followed my installation guide, this error is not due to missing a system requirement. Otherwise, check your `TexMobject`s in your code.
+
+3. `No module named manim`
+
 This error occurs when you use the command to run a manim project when your not in the parent directory. Make sure that your current directory is in manim, and no other sub directory. 
-## Running-Manim-Projects
+
+## Running Manim Projects
+
+> I recommend to look at these later, and start with the tutorial
+
 Easy way to test whether all your installations are working is by running the command below
-```bash
-    python3 -m manim example_scenes.py SquareToCircle -pl
+```shell
+$ manim example_scenes.py SquareToCircle -pl
 ```
 
 If it worked, then congratulations! Now you can run manim programs and get started with making animations. 
 Now, this will be the general command to run all manim projects
-```python
-    python3 -m manim pythonFile.py className -args
+```shell
+$ manim pythonFile.py SceneName options...
 ```
 
-**NOTE 1**: Your videos that you make are saved in the folder called *media*. \
-**NOTE 2**: The command for running the manim programs should only be run in the parent directory. 
- 
-### classNames
-Manim programs have a certain structure. The Python program file requires you to make classes for all your series of animations. If you make more than a few classes, you have to run commands for every class you make. Seperate videos are made for every class.  
-### Args
-Args are a list of arguements that can be stated when running the program. The most important agruements and it's explanations are provided in the [GO TO GUIDE.](#GO-TO-GUIDE)
-I recommend to look at it later, and start with the tutorial.
+* **SceneName**: Manim programs have a certain structure. The Python program file requires you to make classes for all your series of animations. If you make more than a few classes, you have to run commands for every class you make. Seperate videos are made for every class.
+* **options**: Args are a list of arguments that can be stated when running the program. The most important arguments and it's explanations are provided in the [GO TO GUIDE](#GO-TO-GUIDE-).
+
+There are also some intersting facts **to care about** when building the videos:
+
+1. The videos you've made are saved in a folder called `videos`.
+2. Manim converts `TexMobject` (`TextMobject` is a child class of `TexMobject`) to SVG before rendering them in the video, so a folder called `Tex` is created for storing the svg files of these `TexMobject`'s.
+3. Do **NOT** delete `Tex` when cleaning your project. When generating LaTeX, manim first generates the hash for the specific `TexMobject` according to the content of text. This generated hash will eventually be the file name of the svg output of the `TexMobject`, and when the svg file already exists in the `Tex` directory, manim will skip compiling the current `TexMobject` since the SVG is already available for rendering. If you delete `Tex` folder, you will need to have all the SVG's built again when running manim next time, which is _extremely_ time-consuming. See also [`manimlib/utils/tex_file_writing.py`][tex_file_writing_source]
+
+[tex_file_writing_source]: https://github.com/3b1b/manim/blob/master/manimlib/utils/tex_file_writing.py
+
 ## Tutorial!
 Finally we can start. In this tutorial, we will learn by doing. 
+
 ### Basics
 ``` python
 from manimlib.imports import *
@@ -112,14 +137,16 @@ class Shapes(Scene):
 ```
 
 We will break this into parts: 
-* Import: The import in this code is the import we will use in all manim projects. It has almost all the imports we will ever require
+* Import: The creators of manim understands our mind when using abundant animation objects in the video, so they allow us to import everything needed for creating math animations by importing `manimlib.imports`
 * Class: For running animations, you have to make a class that has a base class from manim. 
-  * Method: The construct method is special to manim. Manim calls on construct for creating animations. Therefore, every class that runs manim has to have this method. 
+* **construct()** method: While creating animation for a scene, manim creates an object for the specific scene class. According to the source code of [`manimlib/scene/scene.py`][scene_source], after being run from `__init__()`, the Scene class itself calls `construct()`, so put your animation code in `construct()` if you want manim to render them.
 * Code: You don't have to fully understand how the code works yet. But you can see that you first define your animations, and then you display it. You can experiment with the order in which you define and display.
 
-**NOTE**: If you recall, to run this animation, you would run the following in the terminal - 
-```bash
-    python3 -m manim fileName.py Shapes -pl
+[scene_source]: https://github.com/3b1b/manim/blob/master/manimlib/scene/scene.py
+
+**NOTE**: If you recall, to run this animation, you would run the following in the terminal
+```shell
+$ manim fileName.py Shapes -pl
 ```
 **Click for results on YouTube:**
 
@@ -162,10 +189,10 @@ class Shapes(Scene):
 ```
 After looking at a lot of pieces of code in this tutorial, you will eventually familiarize yourself with manim. So lets start!
 
-Our focus is going to shift from understanding the structure of our code, to understanding the code itself. The first import statement imports many of the classes we will use. 
+Our focus is going to shift from understanding the structure of our code, to understanding the code itself.
 
-The section for making shapes creates shapes that can be used in manim. You can define it's size, color,etc. 
-You will see some methods such as *surround* or *FadeOut*, we wil classify them later. The code is simple enough to read, most of it looks like English. 
+The section for making shapes creates shapes that can be used in manim. You can define it's size, color, etc. 
+You will see some methods such as `surround` or `FadeOut`, we will classify them later. The code is simple enough to read, most of it looks like English. 
 
 The section for showing the animaton displays the shapes, as specified in the code. Let's look at the what the code offers.
 
@@ -182,27 +209,26 @@ The section for showing the animaton displays the shapes, as specified in the co
 * FadeOut
 * GrowFromCenter
 
-**Adding:**
-These are some of the methods for adding mobjects or playing Animations on mobjects. Note: If you play an animation, you don't have to add it to the screen. The animation does it for you. 
+**Adding:** These are some of the methods for adding mobjects or playing Animations on mobjects. Note: If you play an animation, you don't have to add it to the screen. The animation does it for you. 
 * Play
 * Add
 
 In this code, I specifically included an example that I found useful to know. 
-``` python
-    pointers.append(Line(ORIGIN, np.array([cos(pi/180*360/8*i),sin(pi/180*360/8*i), 0]),color=YELLOW))
+```python
+pointers.append(Line(ORIGIN, np.array([cos(pi/180*360/8*i),sin(pi/180*360/8*i), 0]),color=YELLOW))
 ```
 I am appending mobjects into an list. This way I can manipulate the mobjects in the list. However, some manim methods such as *FadeOut()* can't take multiple mobjects at once. This makes it hard to do multiple tasks with less lines of code. We will take a look at a way to overcome that problem later. Although, some methods do however take multiple mobjects. 
 
 For example: self.add() took the list. However, you have to unpack the list first. 
 ```python
-    self.add(*pointers)
+self.add(*pointers)
 ```
 Here, mobjects in the list pointers, we unpacked and passed as arguments to *add()*. Notice the syntax for doing so. We put * before the list.   
 
 Last note. If you realized, the base class of the class above was *Scene*. This is provided by manim. Using it, we can access methods pertaining to manim. Manim also has many other base classes that we can use. If you realize, the lines of code below come from the base class. 
 ```python
-    self.add()
-    self.play()
+self.add()
+self.play()
 ```
 There are other bases classes we will explore for making Graphs, 3D Scenes,etc. 
 
@@ -250,7 +276,7 @@ TextMobjects will be used later on to write good looking math equations.
 
 [![Youtube video link](https://img.youtube.com/vi/3pxIVQxlpRQ/0.jpg)](https://www.youtube.com/watch?v=3pxIVQxlpRQ)
 
-### Math-Equations
+### Math Equations
 
 ```python
 
@@ -301,38 +327,41 @@ class Equations(Scene):
 ```
 Here, we will  look at very important concepts that will help when using Manim. 
 
-That looks long, but it's very simple. Here I have provided 2 ways of making equation and displaying it to the screen. If you remember, we installed some latex system requirements. We will use LaTex to make our equations look nice. 
+That looks long, but it's very simple. Here I have provided 2 ways of making equation and displaying it to the screen. If you remember, we installed some latex system requirements. We will use LaTeX to make our equations look nice. 
 
-LaTex will take it's own tutorial. However, you don't need to know a lot of LaTex. I will introduce some rules that will help you write any math equation. Notice that equations are specified in TextMobjects. 
-
-**LaTex:** When making an equation, the general rule is to put a *$* at the start and end of the text. For example:
-```python
-text = TextMobject("This is text") #Normal text
-equation = TextMobject("$X$") #This is an equation X
-```
-
-Now for the fun part. In LaTex, you can represent symbols using a backslash and a keyword. THis include theta, alpha, summation, etc. In Manim, it is similar. 
+LaTeX will take it's own tutorial. However, you don't need to know a lot of LaTeX. I will introduce some rules that will help you write any math equation. Notice that equations are specified in `TexMobject`s instead of `TextMobject`s. 
 
 ```python
-theta = TextMobject("$\\theta$")
+text = TextMobject("This is text")  # Normal text
+equation = TexMobject("2x+1=3")       # Math equation
 ```
-Notice, in Manim, you specify symbols by putting 2 backslash before the keyword. 
+
+If you want to put both regular text and math equations in one animation, you can use `$` to at both start and end of the math equations:
+```python
+equation_alternative = TextMobject("Equation: $2x+1=3$") # This is an equation
+```
+
+Now for the fun part. In LaTeX, you can represent symbols using a backslash and a keyword. THis include theta, alpha, summation, integral, fractions, etc.
+```python
+theta = TexMobject("\\theta")
+```
+For the sake of escape sequences, we need to use two backslashes to represent `\` in Python
 
 Finally, the I will introduce the syntax for adding subscripts and superscripts. Here is the syntax for superscripts. 
 
 ```python
-superScript_equation = TextMobject("$r^{\\theta}$")
+superScript_equation = TexMobject("r^{\\theta}")
 ```
 
-The ^ symbol signifies superscript. We put the symbol theta as the superscript. Also, when specifying superscript the {} brackets are not displayed in the equation. They help group all the elements you want to add to the superscript. 
+The `^` symbol signifies superscript. We put the symbol theta as the superscript. Also, when specifying superscript the {} brackets are not displayed in the equation. They help group all the elements you want to add to the superscript. 
 
 For subscripts, it is similar. 
 
 ```python
-subScript_equation = TextMobject("$\\theta_{1}$")
+subScript_equation = TexMobject("\\theta_{1}")
 ```
 
-This is theta subscript 1. The _ signifies subscript. Like usual, the {} brackets aren't displayed in the equation. For more symbol options, go to the [resources](#Resources) section. 
+This is theta subscript 1. The `_` signifies subscript. Like usual, the {} brackets aren't displayed in the equation. For more symbol options, go to the [resources](#Resources) section. 
 
 Now, we will look at a complex way of writing equations using VGroup. Let's look at what a VGroup is.
 
@@ -345,7 +374,6 @@ Let's look at the example where we make a VGroup for the math equation.
 ```python
 second_eq = ["$J(\\theta_{0}, \\theta_{1})$", "=", "$\\frac{1}{2m}$", "$\\sum\\limits_{i=1}^m$", "(", "$h_{\\theta}(x^{(i)})$", "-", "$y^{(i)}$", "$)^2$"]
 ```
-
 
 **Click for results on YouTube:**
 
@@ -505,8 +533,6 @@ class Images(Scene):
         img.shift(2 * UP)  # Move the image
 
         self.play(ShowCreation(img))  # Display the image
-        
-        
 ```
 
 Alternatively, you could load the image using OpenCV or PIL, and then display the image using Manim.
@@ -526,9 +552,9 @@ class Images(Scene):
         self.play(ShowCreation(imMob))
 ```
 
-## GO-TO-GUIDE!
+## GO TO GUIDE!
 [Click Here For the Guide](https://github.com/malhotra5/Manim-Guide)
-## Exploring-the-Repo
+## Exploring the Repo
 
 ### ManimLib
 #### Animations
@@ -538,9 +564,9 @@ class Images(Scene):
 #### Utils
 
 ### Media
-### Old_Projects
+### Old\_Projects
 
-## Putting-it-together
+## Putting it together
 Manim is extremely powerful, and is capable of creating high quality graphics. You can make your animations using graphics and then overlay your voice over the video. 
 
 If you were able to follow this tutorial successfully, then Congrats! Hopefully you can profiently use Manim! 
@@ -550,11 +576,12 @@ If you were able to follow this tutorial successfully, then Congrats! Hopefully 
 * Manim Guide
   * [Manim Resource Guide](https://github.com/malhotra5/Manim-Guide)
 
-## Further-Work
+## Further Work
 I am missing a lot of aspects behind this powerful library after reverse engineering manim. There are things such as 3D scenes that still need to be documented. But hopefully this guide will cater to your basic needs. 
 ## Acknowledgements
-* 3 Blue 1 Brown: The creator of this engine who uses it for creating cool math videos. Visit his YouTube channel and manin repo at 
-  * https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw
-  * https://github.com/3b1b/manim
-* Todd Zimmerman: Recently made a new documentation made in Python3.7. Visit it at
-  * https://talkingphysics.wordpress.com/tag/manim/
+* 3Blue1Brown: The creator of this engine who uses it for creating cool math videos. Visit his [YouTube channel][1] and [manim repo][2] for more information
+* Todd Zimmerman: Recently made a new documentation made in Python3.7. Visit it [here][3]
+
+[1]: https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw
+[2]: https://github.com/3b1b/manim
+[3]: https://talkingphysics.wordpress.com/tag/manim/
