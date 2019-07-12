@@ -402,7 +402,9 @@ class Graphing(GraphScene):
     def func_to_graph_2(self, x):
         return(x**3)
 ```
+By now you should be able to identify similar patterns when coding with Manim. The config dictionary, specifies various parameters for graphing: the axis size, axis color or graph colors. The exact parameters are pretty self explanatory and are specified below. 
 
+To make a graph, you have to specify a method that returns the y value for evey x value inupt. This is specified in the method *func_to_graph*. The method *get_graph* creates a mobject out of the previous method, which can be manipulated. Note, that the graph method only specifies what the graph should look like given a point. But, the extent of how much is displayed (like from -5 to 5 on the x axis) is determined by the **CONFIG** dictionary. 
 
 Here is the default dictionary Manim uses for graphing. 
 ```python
