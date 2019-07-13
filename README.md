@@ -571,10 +571,8 @@ Manim is extremely powerful, and is capable of creating high quality graphics. Y
 
 If you were able to follow this tutorial successfully, then Congrats! Hopefully you can profiently use Manim! 
 ## Resources
-* Latex
-  * https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols
-* Manim Guide
-  * [Manim Resource Guide](https://github.com/malhotra5/Manim-Guide)
+* [Latex](https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols)
+* [Manim Resource Guide](https://github.com/malhotra5/Manim-Guide)
 
 ## Further Work
 I am missing a lot of aspects behind this powerful library after reverse engineering manim. There are things such as 3D scenes that still need to be documented. But hopefully this guide will cater to your basic needs. 
