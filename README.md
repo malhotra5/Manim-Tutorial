@@ -129,16 +129,11 @@ We will break this into parts:
   * Method: The construct method is special to manim. Manim calls on construct for creating animations. Therefore, every class that runs manim has to have this method.
 * Code: You don't have to fully understand how the code works yet. But you can see that you first define your animations, and then you display it. You can experiment with the order in which you define and display.
 
-> **NOTE**: If you recall, to run this animation, you would run the following in the terminal -
->```bash
->    python3 -m manim fileName.py Shapes -pl
->  ```
+> **NOTE:** If you recall, to run this animation, you would run the following in the terminal -
 
-> Some code:
->
-> ```lang-js
-> const a = 0
-> ```
+```bash
+    python3 -m manim fileName.py Shapes -pl
+  ```
 
 **Click for results on YouTube:**
 
