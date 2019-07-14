@@ -94,7 +94,7 @@ Now, this will be the general command to run all manim projects
     python3 -m manim pythonFile.py className -args
 ```
 
-**NOTE 1**: Your videos that you make are saved in the folder called *media*. \
+> **NOTE 1**: Your videos that you make are saved in the folder called *videos*. \
 **NOTE 2**: The command for running the manim programs should only be run in the parent directory.
 
 ### classNames
@@ -129,10 +129,11 @@ We will break this into parts:
   * Method: The construct method is special to manim. Manim calls on construct for creating animations. Therefore, every class that runs manim has to have this method.
 * Code: You don't have to fully understand how the code works yet. But you can see that you first define your animations, and then you display it. You can experiment with the order in which you define and display.
 
-**NOTE**: If you recall, to run this animation, you would run the following in the terminal -
+> **NOTE**: If you recall, to run this animation, you would run the following in the terminal -
 ```bash
     python3 -m manim fileName.py Shapes -pl
 ```
+
 **Click for results on YouTube:**
 
 [![Youtube video link](https://img.youtube.com/vi/AYCJHLIlbW0/0.jpg)](https://www.youtube.com/watch?v=AYCJHLIlbW0)
