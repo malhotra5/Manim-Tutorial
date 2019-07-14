@@ -131,7 +131,7 @@ We will break this into parts:
 
 > **NOTE**: If you recall, to run this animation, you would run the following in the terminal -
 > <!-- language: python -->
-> ```bash
+```bash
     python3 -m manim fileName.py Shapes -pl
   ```
 
