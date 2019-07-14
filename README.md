@@ -134,6 +134,12 @@ We will break this into parts:
 >    python3 -m manim fileName.py Shapes -pl
 >  ```
 
+> Some code:
+>
+> ```lang-js
+> const a = 0
+> ```
+
 **Click for results on YouTube:**
 
 [![Youtube video link](https://img.youtube.com/vi/AYCJHLIlbW0/0.jpg)](https://www.youtube.com/watch?v=AYCJHLIlbW0)
