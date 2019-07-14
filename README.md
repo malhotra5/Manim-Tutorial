@@ -51,7 +51,7 @@ Lets first get the manim repo and python dependencies using the terminal -
     python3 -m pip install -r requirements.txt   #Command 3
 ```
 
-> **NOTE:**: Although it is highly recommended, the following system installations are only required if you want to use `LaTeX`
+> **NOTE:** Although it is highly recommended, the following system installations are only required if you want to use `LaTeX`
 
 ### Linux Users
 These are the final system requirements: `Cairo`, `Latex`, `ffmpeg` and `sox`.
