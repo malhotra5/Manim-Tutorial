@@ -130,10 +130,9 @@ We will break this into parts:
 * Code: You don't have to fully understand how the code works yet. But you can see that you first define your animations, and then you display it. You can experiment with the order in which you define and display.
 
 > **NOTE**: If you recall, to run this animation, you would run the following in the terminal -
-> <!-- language: python -->
-```bash
-    python3 -m manim fileName.py Shapes -pl
-  ```
+>```bash
+>    python3 -m manim fileName.py Shapes -pl
+>  ```
 
 **Click for results on YouTube:**
 
