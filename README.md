@@ -43,16 +43,20 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
 
 ## Installations
 Lets first get the manim repo and python dependencies using the terminal -
+> **OPTIONS:** Use either `Command 2` or `Command 3` below. For `Command 3`, you need to be inside the manim directory.
 
 ``` bash
-    git clone https://github.com/3b1b/manim.git
-    python3 -m pip install -r requirements.txt
+    git clone https://github.com/3b1b/manim.git  #Command 1
+    pip3 install manimlib                        #Command 2
+    python3 -m pip install -r requirements.txt   #Command 3
 ```
 
-### Linux Users
-These are the final system requirements: Cairo, Latex, ffmpeg and sox.
+> **NOTE:**: Although it is highly recommended, the following system installations are only required if you want to use `LaTeX`
 
-``` bash
+### Linux Users
+These are the final system requirements: `Cairo`, `Latex`, `ffmpeg` and `sox`.
+
+```bash
     sudo apt install ffmpeg sox
     sudo apt-get install libcairo2-dev libjpeg-dev libgif-dev
     sudo apt install texlive-latex-base texlive-full texlive-fonts-extra
@@ -61,10 +65,13 @@ These are the final system requirements: Cairo, Latex, ffmpeg and sox.
 ### Windows Users
 
 ### Macintosh Users
+```bash
+    brew cask install mactex
+```
 
 ### Common Problems
 * Problem #1: Cairo System requirement
-People are sometimes unable to install cairo through the terminal. But, it is possible to install it using the Python.
+People are sometimes unable to install `Cairo` through the terminal. But, it is possible to install it using the Python.
 ``` bash
         pip3 install pycairo
 ```
@@ -75,7 +82,7 @@ This error can be frustrating. Especially when you don't know what to install. B
 * Problem #3: **No module named manim**
 This error occurs when you use the command to run a manim project when your not in the parent directory. Make sure that your current directory is in manim, and no other sub directory.
 
-## Running-Manim-Projects
+## Running Manim Projects
 Easy way to test whether all your installations are working is by running the command below
 ```bash
     python3 -m manim example_scenes.py SquareToCircle -pl
