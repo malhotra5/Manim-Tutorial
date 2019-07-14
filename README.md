@@ -1,8 +1,10 @@
 # Manim-Tutorial
 A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
+
 ## Requirements
 * Python 3.7 (I managed to run it on version 3.6.7, so I'm guessing 3.6 and above works)
 * An operating system (Linux, Windows or Macintosh)
+
 ## Table of Contents
 * [Installations](#Installations)
   * [Linux Users](#Linux-Users)
@@ -38,8 +40,8 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
 * [Resources](#Resources)
 * [Further Work](#Further-Work)
 * [Acknowledgments](#Acknowledgments)
-## Installations
 
+## Installations
 Lets first get the manim repo and python dependencies using the terminal -
 
 ``` bash
@@ -72,6 +74,7 @@ This error can be frustrating. Especially when you don't know what to install. B
 
 * Problem #3: **No module named manim**
 This error occurs when you use the command to run a manim project when your not in the parent directory. Make sure that your current directory is in manim, and no other sub directory.
+
 ## Running-Manim-Projects
 Easy way to test whether all your installations are working is by running the command below
 ```bash
@@ -450,6 +453,19 @@ CONFIG = {
 ### 3D Graphing
 
 #### Spheres and more
+```python
+  from manimlib.imports import *
+
+  class ThreeDObjects(SpecialThreeDScene):
+    def construct(self):
+        sphere = self.get_sphere()
+        cube = Cube()
+        prism = Prism()
+        self.play(ShowCreation(sphere))
+        self.play(ReplacementTransform(sphere, cube))
+        self.play(ReplacementTransform(cube, prism))
+        self.wait(2)
+```
 
 #### Camera Works
 
@@ -550,7 +566,7 @@ class Images(Scene):
 ### Media
 ### Old_Projects
 
-## Putting-it-together
+## Putting it together
 Manim is extremely powerful, and is capable of creating high quality graphics. You can make your animations using graphics and then overlay your voice over the video.
 
 If you were able to follow this tutorial successfully, then Congrats! Hopefully you can proficiently use Manim!
