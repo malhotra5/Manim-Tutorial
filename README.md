@@ -571,16 +571,12 @@ Manim is extremely powerful, and is capable of creating high quality graphics. Y
 
 If you were able to follow this tutorial successfully, then Congrats! Hopefully you can proficiently use Manim!
 ## Resources
-* Latex
-  * https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols
-* Manim Guide
-  * [Manim Resource Guide](https://github.com/malhotra5/Manim-Guide)
+* [Latex](https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols)
+* [Manim Guide](https://github.com/malhotra5/Manim-Guide)
 
 ## Further Work
 I am missing a lot of aspects behind this powerful library after reverse engineering manim. There are things such as 3D scenes that still need to be documented. But hopefully this guide will cater to your basic needs.
+
 ## Acknowledgments
-* 3 Blue 1 Brown: The creator of this engine who uses it for creating cool math videos. Visit his YouTube channel and manin repo at
-  * https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw
-  * https://github.com/3b1b/manim
-* Todd Zimmerman: Recently made a new documentation made in Python3.7. Visit it at
-  * https://talkingphysics.wordpress.com/tag/manim/
+* 3 Blue 1 Brown: The creator of this engine who uses it for creating cool math videos. Visit his [YouTube channel](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) and [manin repo](https://github.com/3b1b/manim).
+* Todd Zimmerman: Recently made a new [documentation](https://talkingphysics.wordpress.com/tag/manim/) of manim in Python3.7.
