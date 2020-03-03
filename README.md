@@ -482,7 +482,7 @@ CONFIG = {
 ```python
 from manimlib.imports import *
 
-class ThreedSurface(ParametricSurface):
+class ThreeDSurface(ParametricSurface):
 
     def __init__(self, **kwargs):
         kwargs = {
