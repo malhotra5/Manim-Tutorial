@@ -63,13 +63,28 @@ These are the final system requirements: `Cairo`, `Latex`, `ffmpeg` and `sox`.
 ```
 
 ### Windows Users
-install [Sox](https://sourceforge.net/projects/sox/)
-install [ffmpeg](https://ffmpeg.zeranoe.com/builds/)
-install [miktex](https://miktex.org/download)
-install [pycairo](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycairo), this can be pycairo‑1.19.1‑cp37‑cp37m‑win_amd64.whl or 
+
+!!!to my knowledge manim only works with python 3.7 (yet)!!!
+
+* install [Sox](https://sourceforge.net/projects/sox/)
+
+* install [ffmpeg](https://ffmpeg.zeranoe.com/builds/)
+
+* install [miktex](https://miktex.org/download)
+
+* install [pycairo](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycairo), this can be pycairo‑1.19.1‑cp37‑cp37m‑win_amd64.whl or 
 pycairo‑1.19.1‑cp37‑cp37m‑win32.whl depending on your achitecture and python version. (The 37 stands for python 3.7)
 
-install pycairo using `pip install [your-pycairo-whl]` in the directory where the pycairo wheel is located.
+* install pycairo using `pip install [your-pycairo-whl]` in the directory where the pycairo wheel is located.
+
+* download manim zip file from the github repo and extract it
+
+make a new venv, if you want to
+
+delete pycairo from the requirentments.txt
+
+run `pip install -r requirentments.txt`
+
 ### Macintosh Users
 ```bash
     brew cask install mactex
