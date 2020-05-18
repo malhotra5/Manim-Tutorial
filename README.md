@@ -9,7 +9,7 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
 * [Installations](#Installations)
   * [Linux Users](#Linux-Users)
   * [Windows Users](#Windows-Users)
-  * [Macintosh Users](#Macintosh-Users)
+  * [Mac Users](#Mac-Users)
   * [Common Problems](#Common-Problems)
 * [Running Manim Projects](#Running-Manim-Projects)
   * [What ClassName means](#classNames)
@@ -46,9 +46,9 @@ Lets first get the manim repo and python dependencies using the terminal -
 > **OPTIONS:** Use either `Command 2` or `Command 3` below. For `Command 3`, you need to be inside the manim directory.
 
 ``` bash
-    git clone https://github.com/3b1b/manim.git  #Command 1
-    pip3 install manimlib                        #Command 2
-    python3 -m pip install -r requirements.txt   #Command 3
+$ git clone https://github.com/3b1b/manim.git                    #Command 1
+$ pip3 install manimlib                                          #Command 2
+$ pip3 install -r requirements.txt && python3 setup.py install   #Command 3
 ```
 
 > **NOTE:** Although it is highly recommended, the following system installations are only required if you want to use `LaTeX`
@@ -64,7 +64,8 @@ These are the final system requirements: `Cairo`, `Latex`, `ffmpeg` and `sox`.
 
 ### Windows Users
 
-### Macintosh Users
+### Mac Users
+To support LaTeX in Mac OSX, install MacTex:
 ```bash
     brew cask install mactex
 ```
@@ -103,14 +104,14 @@ It creates a virtual Ubuntu os on your host os. All the dependencies are pre-ins
 
 ## Running Manim Projects
 Easy way to test whether all your installations are working is by running the command below
-```bash
-    python3 -m manim example_scenes.py SquareToCircle -pl
+```shell
+$ manim example_scenes.py SquareToCircle -pl
 ```
 
 If it worked, then congratulations! Now you can run manim programs and get started with making animations.
 Now, this will be the general command to run all manim projects
-```python
-    python3 -m manim pythonFile.py className -args
+```shell
+$ manim pythonFile.py SceneName options...
 ```
 
 > **NOTE 1**: Your videos that you make are saved in the folder called *videos*. \
@@ -129,13 +130,13 @@ from manimlib.imports import *
 
 class Shapes(Scene):
     def construct(self):
-        ######Code######
-        #Making shapes
+        ###### Code ######
+        # Making shapes
         circle = Circle()
         square = Square()
         triangle=Polygon(np.array([0,0,0]),np.array([1,1,0]),np.array([1,-1,0]))
 
-        #Showing shapes
+        # Showing shapes
         self.play(ShowCreation(circle))
         self.play(FadeOut(circle))
         self.play(GrowFromCenter(square))
@@ -150,7 +151,7 @@ We will break this into parts:
 
 > **NOTE:** If you recall, to run this animation, you would run the following in the terminal -
 >```bash
->    python3 -m manim fileName.py Shapes -pl
+> $ manim fileName.py Shapes -pl
 >  ```
 
 **Click for results on YouTube:**
@@ -165,8 +166,8 @@ from math import cos, sin, pi
 
 class Shapes(Scene):
     def construct(self):
-        #######Code#######
-        #Making Shapes
+        ####### Code #######
+        # Making Shapes
         circle = Circle(color=YELLOW)
         square = Square(color=DARK_BLUE)
         square.surround(circle)
@@ -181,7 +182,7 @@ class Shapes(Scene):
         for i in range(8):
             pointers.append(Line(ORIGIN, np.array([cos(pi/180*360/8*i),sin(pi/180*360/8*i), 0]),color=YELLOW))
 
-        #Showing animation
+        # Showing animation
         self.add(circle)
         self.play(FadeIn(square))
         self.play(Transform(square, rectangle))
@@ -214,27 +215,28 @@ The section for showing the animaton displays the shapes, as specified in the co
 * FadeOut
 * GrowFromCenter
 
+
 **Adding:**
 These are some of the methods for adding mobjects or playing Animations on mobjects. Note: If you play an animation, you don't have to add it to the screen. The animation does it for you.
 * Play
 * Add
 
 In this code, I specifically included an example that I found useful to know.
-``` python
-    pointers.append(Line(ORIGIN, np.array([cos(pi/180*360/8*i),sin(pi/180*360/8*i), 0]),color=YELLOW))
+```python
+pointers.append(Line(ORIGIN, np.array([cos(pi/180*360/8*i),sin(pi/180*360/8*i), 0]),color=YELLOW))
 ```
 I am appending mobjects into an list. This way I can manipulate the mobjects in the list. However, some manim methods such as *FadeOut()* can't take multiple mobjects at once. This makes it hard to do multiple tasks with less lines of code. We will take a look at a way to overcome that problem later. Although, some methods do however take multiple mobjects.
 
 For example: self.add() took the list. However, you have to unpack the list first.
 ```python
-    self.add(*pointers)
+self.add(*pointers)
 ```
 Here, mobjects in the list pointers, we unpacked and passed as arguments to *add()*. Notice the syntax for doing so. We put * before the list.   
 
 Last note. If you realized, the base class of the class above was *Scene*. This is provided by manim. Using it, we can access methods pertaining to manim. Manim also has many other base classes that we can use. If you realize, the lines of code below come from the base class.
 ```python
-    self.add()
-    self.play()
+self.add()
+self.play()
 ```
 There are other bases classes we will explore for making Graphs, 3D Scenes,etc.
 
@@ -249,20 +251,20 @@ from manimlib.imports import *
 
 class makeText(Scene):
     def construct(self):
-        #######Code#######
-        #Making text
+        ####### Code #######
+        # Making text
         first_line = TextMobject("Manim is fun")
         second_line = TextMobject("and useful")
         final_line = TextMobject("Hope you like it too!", color=BLUE)
         color_final_line = TextMobject("Hope you like it too!")
 
-        #Coloring
+        # Coloring
         color_final_line.set_color_by_gradient(BLUE,PURPLE)
 
-        #Position text
+        # Position text
         second_line.next_to(first_line, DOWN)
 
-        #Showing text
+        # Showing text
         self.wait(1)
         self.play(Write(first_line), Write(second_line))
         self.wait(1)
@@ -290,7 +292,7 @@ from manimlib.imports import *
 
 class Equations(Scene):
     def construct(self):
-        #Making equations
+        # Making equations
         first_eq = TextMobject("$$J(\\theta) = -\\frac{1}{m} [\\sum_{i=1}^{m} y^{(i)} \\log{h_{\\theta}(x^{(i)})} + (1-y^{(i)}) \\log{(1-h_{\\theta}(x^{(i)}))}] $$")
         second_eq = ["$J(\\theta_{0}, \\theta_{1})$", "=", "$\\frac{1}{2m}$", "$\\sum\\limits_{i=1}^m$", "(", "$h_{\\theta}(x^{(i)})$", "-", "$y^{(i)}$", "$)^2$"]
 
@@ -306,14 +308,14 @@ class Equations(Scene):
         des2 = TextMobject("Or this...")
         des3 = TextMobject("And it looks nice!!")
 
-        #Coloring equations
+        # Coloring equations
         second_mob.set_color_by_gradient("#33ccff","#ff00ff")
 
         #Positioning equations
         des1.shift(2*UP)
         des2.shift(2*UP)
 
-        #Animating equations
+        # Animating equations
         self.play(Write(des1))
         self.play(Write(first_eq))
         self.play(ReplacementTransform(des1, des2), Transform(first_eq, eq2))
@@ -337,35 +339,33 @@ That looks long, but it's very simple. Here I have provided 2 ways of making equ
 
 LaTex will take it's own tutorial. However, you don't need to know a lot of LaTex. I will introduce some rules that will help you write any math equation. Notice that equations are specified in TextMobjects.
 
-**LaTex:** When making an equation, the general rule is to put a *$* at the start and end of the text. For example:
 ```python
-text = TextMobject("This is text") #Normal text
-equation = TextMobject("$X$") #This is an equation X
+text = TextMobject("This is text")  # Normal text
+equation = TexMobject("2x+1=3")       # Math equation
 ```
 
 Now for the fun part. In LaTex, you can represent symbols using a backslash and a keyword. THis include theta, alpha, summation, etc. In Manim, it is similar.
 
+Now for the fun part. In LaTeX, you can represent symbols using a backslash and a keyword. THis include theta, alpha, summation, integral, fractions, etc.
 ```python
-theta = TextMobject("$\\theta$")
+theta = TexMobject("\\theta")
 ```
 Notice, in Manim, you specify symbols by putting 2 backslash before the keyword.
 
 Finally, the I will introduce the syntax for adding subscripts and superscripts. Here is the syntax for superscripts.
 
 ```python
-superScript_equation = TextMobject("$r^{\\theta}$")
+superScript_equation = TexMobject("r^{\\theta}")
 ```
 
-The ^ symbol signifies superscript. We put the symbol theta as the superscript. Also, when specifying superscript the {} brackets are not displayed in the equation. They help group all the elements you want to add to the superscript.
-
+The `^` symbol signifies superscript. We put the symbol theta as the superscript. Also, when specifying superscript the {} brackets are not displayed in the equation. They help group all the elements you want to add to the superscript. 
 For subscripts, it is similar.
 
 ```python
-subScript_equation = TextMobject("$\\theta_{1}$")
+subScript_equation = TexMobject("\\theta_{1}")
 ```
 
-This is theta subscript 1. The _ signifies subscript. Like usual, the {} brackets aren't displayed in the equation. For more symbol options, go to the [resources](#Resources) section.
-
+This is theta subscript 1. The `_` signifies subscript. Like usual, the {} brackets aren't displayed in the equation. For more symbol options, go to the [resources](#Resources) section. 
 Now, we will look at a complex way of writing equations using VGroup. Let's look at what a VGroup is.
 
 A VGroup is a list of mobjects who to which you can apply animations all at once. For example, if you have a list of circles, you could transform all of them into squares, by only transforming the VGroup.
@@ -377,7 +377,6 @@ Let's look at the example where we make a VGroup for the math equation.
 ```python
 second_eq = ["$J(\\theta_{0}, \\theta_{1})$", "=", "$\\frac{1}{2m}$", "$\\sum\\limits_{i=1}^m$", "(", "$h_{\\theta}(x^{(i)})$", "-", "$y^{(i)}$", "$)^2$"]
 ```
-
 
 **Click for results on YouTube:**
 
@@ -417,7 +416,7 @@ class Graphing(GraphScene):
 
         point = Dot(self.coords_to_point(1,self.func_to_graph(1)))
 
-        #Display graph
+        # Display graph
         self.play(ShowCreation(func_graph), Write(graph_lab))
         self.wait(1)
         self.play(ShowCreation(vert_line))
@@ -438,9 +437,10 @@ By now you should be able to identify similar patterns when coding with Manim. T
 
 To make a graph, you have to specify a method that returns the y value for evey x value inupt. This is specified in the method *func_to_graph*. The method *get_graph* creates a mobject out of the previous method, which can be manipulated. Note, that the graph method only specifies what the graph should look like given a point. But, the extent of how much is displayed (like from -5 to 5 on the x axis) is determined by the **CONFIG** dictionary.
 
-Here is the default dictionary Manim uses for graphing.
-```python
+Here is the default dictionary Manim uses for graphing. Refer to [`manimlib/scene/graph_scene.py`][graph_scene_src]
 
+[graph_scene_src]: https://github.com/3b1b/manim/blob/master/manimlib/scene/graph_scene.py`
+```python
 CONFIG = {
     "x_min": -1,
     "x_max": 10,
@@ -468,9 +468,7 @@ CONFIG = {
     "area_opacity": 0.8,
     "num_rects": 50
 }
-
 ```
-
 
 **Click for results on YouTube:**
 
@@ -554,12 +552,10 @@ from manimlib.imports import *
 class Images(Scene):
     def construct(self):
         img = ImageMobject('pathToIm.png')
-        img.scale(2)  # Resize to be twice as big
-        img.shift(2 * UP)  # Move the image
+        img.scale(2)                  # Resize to be twice as big
+        img.shift(2 * UP)             # Move the image
 
         self.play(ShowCreation(img))  # Display the image
-
-
 ```
 
 Alternatively, you could load the image using OpenCV or PIL, and then display the image using Manim.
@@ -581,7 +577,7 @@ class Images(Scene):
 
 ## GO TO GUIDE!
 [Click Here For the Guide](https://github.com/malhotra5/Manim-Guide)
-## Exploring-the-Repo
+## Exploring the Repo
 
 ### ManimLib
 #### Animations
@@ -591,7 +587,7 @@ class Images(Scene):
 #### Utils
 
 ### Media
-### Old_Projects
+### Old\_Projects
 
 ## Putting it together
 Manim is extremely powerful, and is capable of creating high quality graphics. You can make your animations using graphics and then overlay your voice over the video.
@@ -599,11 +595,14 @@ Manim is extremely powerful, and is capable of creating high quality graphics. Y
 If you were able to follow this tutorial successfully, then Congrats! Hopefully you can proficiently use Manim!
 ## Resources
 * [Latex](https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols)
-* [Manim Guide](https://github.com/malhotra5/Manim-Guide)
+* [Manim Resource Guide](https://github.com/malhotra5/Manim-Guide)
 
 ## Further Work
-I am missing a lot of aspects behind this powerful library after reverse engineering manim. There are things such as 3D scenes that still need to be documented. But hopefully this guide will cater to your basic needs.
+I am missing a lot of aspects behind this powerful library after reverse engineering manim. There are things such as 3D scenes that still need to be documented. But hopefully this guide will cater to your basic needs. 
+## Acknowledgements
+* 3Blue1Brown: The creator of this engine who uses it for creating cool math videos. Visit his [YouTube channel][1] and [manim repo][2] for more information
+* Todd Zimmerman: Recently made a new documentation made in Python3.7. Visit it [here][3]
 
-## Acknowledgments
-* 3 Blue 1 Brown: The creator of this engine who uses it for creating cool math videos. Visit his [YouTube channel](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) and [manin repo](https://github.com/3b1b/manim).
-* Todd Zimmerman: Recently made a new [documentation](https://talkingphysics.wordpress.com/tag/manim/) of manim in Python3.7.
+[1]: https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw
+[2]: https://github.com/3b1b/manim
+[3]: https://talkingphysics.wordpress.com/tag/manim/
