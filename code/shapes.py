@@ -14,10 +14,11 @@ class Shapes(Scene):
         ring2 = Annulus(inner_radius=0.6, outer_radius=1, color=BLUE)
         ring3=Annulus(inner_radius=.2, outer_radius=1, color=BLUE)
         ellipse=Ellipse(width=5, height=3, color=DARK_BLUE)
-
+        
+        n = np.pi / 4
         pointers = []
         for i in range(8):
-            pointers.append(Line(ORIGIN, np.array([cos(pi/180*360/8*i),sin(pi/180*360/8*i), 0]),color=YELLOW))
+            pointers.append(Line(ORIGIN, np.array([np.cos(n * i), np.sin(n * i), 0]), color=YELLOW))
 
         #Showing animation
         self.add(circle)
