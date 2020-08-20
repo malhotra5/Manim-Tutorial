@@ -10,6 +10,7 @@ A tutorial for manim, a mathematical animation engine made by 3b1b for Python.
   * [Linux Users](#Linux-Users)
   * [Windows Users](#Windows-Users)
   * [Macintosh Users](#Macintosh-Users)
+  * [Using Virtual Machine](#Using-Virtual-Box)
   * [Common Problems](#Common-Problems)
 * [Running Manim Projects](#Running-Manim-Projects)
   * [What ClassName means](#classNames)
@@ -103,13 +104,13 @@ This error can be frustrating. Especially when you don't know what to install. B
 * Problem #3: **No module named manim**
 This error occurs when you use the command to run a manim project when your not in the parent directory. Make sure that your current directory is in manim, and no other sub directory.
 
-## Using Virtual Box
+### Using Virtual Box
 
 If you still face problems in installation, you can use manim on Virtual Box.
 It creates a virtual Ubuntu os on your host os. All the dependencies are pre-installed so that you are directly use manim.
 
 1. [Install VirtualBox](https://www.virtualbox.org/).
-2. Download [.ova file](https://drive.google.com/open?id=1QLWhUw4OrOZGpjQh4Wj-dnjCjAKUfl-M) for manim virtual machine.
+2. Download [.ova file](https://drive.google.com/drive/folders/1H8XF9FDm5l_HY-MwevPSECUF5nGPGaQN?usp=sharing) for manim virtual machine.
 3. Install the file 
 4. Use ```fossee``` as the password
 5. Clone manim repository
