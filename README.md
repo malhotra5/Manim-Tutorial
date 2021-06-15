@@ -627,5 +627,5 @@ If you were able to follow this tutorial successfully, then Congrats! Hopefully 
 I am missing a lot of aspects behind this powerful library after reverse engineering manim. There are things such as 3D scenes that still need to be documented. But hopefully this guide will cater to your basic needs.
 
 ## Acknowledgments
-* 3 Blue 1 Brown: The creator of this engine who uses it for creating cool math videos. Visit his [YouTube channel](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) and [manin repo](https://github.com/3b1b/manim).
+* 3 Blue 1 Brown: The creator of this engine who uses it for creating cool math videos. Visit his [YouTube channel](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) and [manim repo](https://github.com/3b1b/manim).
 * Todd Zimmerman: Recently made a new [documentation](https://talkingphysics.wordpress.com/tag/manim/) of manim in Python3.7.
