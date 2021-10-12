@@ -5,5 +5,5 @@ Pillow==8.2.0
 progressbar==2.5
 scipy==1.1.0
 tqdm==4.24.0
-opencv-python==3.4.2.17
+opencv-python==4.2.0.32
 pycairo==1.17.1
