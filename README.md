@@ -629,3 +629,7 @@ I am missing a lot of aspects behind this powerful library after reverse enginee
 ## Acknowledgments
 * 3 Blue 1 Brown: The creator of this engine who uses it for creating cool math videos. Visit his [YouTube channel](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) and [manim repo](https://github.com/3b1b/manim).
 * Todd Zimmerman: Recently made a new [documentation](https://talkingphysics.wordpress.com/tag/manim/) of manim in Python3.7.
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=malhotra5/Manim-Tutorial&type=Date)](https://star-history.com/#malhotra5/Manim-Tutorial&Date)
+
